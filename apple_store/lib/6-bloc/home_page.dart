@@ -1,8 +1,10 @@
-import 'package:apple_store/1-stateful_widget/cart.dart';
-import 'package:apple_store/1-stateful_widget/store.dart';
+import 'package:apple_store/6-bloc/cart.dart';
+import 'package:apple_store/6-bloc/state/badge_bloc.dart';
+import 'package:apple_store/6-bloc/state/cart_bloc.dart';
+import 'package:apple_store/6-bloc/store.dart';
 import 'package:apple_store/common/bottom_bar.dart';
-import 'package:apple_store/common/product.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,45 +17,37 @@ class _HomePageState extends State<HomePage> {
   /// 현재 선택된 index
   int currentIndex = 0;
 
-  /// 카트에 담긴 상품 목록
-  List<Product> cartProductList = [];
-
-  /// 상품 클릭 이벤트
-  void onProductPressed(Product product) {
-    setState(() {
-      if (cartProductList.contains(product)) {
-        cartProductList.remove(product);
-      } else {
-        cartProductList.add(product);
-      }
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: IndexedStack(
-        index: currentIndex,
-        children: [
-          /// Store
-          Store(
-            cartProductList: cartProductList,
-            onPressed: onProductPressed,
-          ),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => CartBloc(),
+        ),
+        BlocProvider(
+          create: (context) => BadgeBloc(cartBloc: context.read()),
+        ),
+      ],
+      child: Scaffold(
+        body: IndexedStack(
+          index: currentIndex,
+          children: const [
+            /// Store
+            Store(),
 
-          /// Cart
-          Cart(
-            cartProductList: cartProductList,
-            onPressed: onProductPressed,
+            /// Cart
+            Cart(),
+          ],
+        ),
+        bottomNavigationBar: BlocBuilder<BadgeBloc, int>(
+          builder: (context, total) => BottomBar(
+            currentIndex: currentIndex,
+            cartTotal: "$total",
+            onTap: (index) => setState(() {
+              currentIndex = index;
+            }),
           ),
-        ],
-      ),
-      bottomNavigationBar: BottomBar(
-        currentIndex: currentIndex,
-        cartTotal: "${cartProductList.length}",
-        onTap: (index) => setState(() {
-          currentIndex = index;
-        }),
+        ),
       ),
     );
   }

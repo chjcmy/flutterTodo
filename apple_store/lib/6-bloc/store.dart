@@ -1,20 +1,17 @@
+import 'package:apple_store/6-bloc/state/cart_bloc.dart';
 import 'package:apple_store/common/product.dart';
 import 'package:apple_store/common/product_tile.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class Store extends StatelessWidget {
   const Store({
     super.key,
-    required this.cartProductList,
-    required this.onPressed,
   });
-
-  final List<Product> cartProductList;
-
-  final void Function(Product product) onPressed;
 
   @override
   Widget build(BuildContext context) {
+    final CartBloc cartBloc = context.watch();
     return Scaffold(
       body: ListView.builder(
         itemCount: storeProductList.length,
@@ -22,8 +19,8 @@ class Store extends StatelessWidget {
           Product product = storeProductList[index];
           return ProductTile(
             product: product,
-            isInCart: cartProductList.contains(product),
-            onPressed: onPressed,
+            isInCart: cartBloc.state.contains(product),
+            onPressed: (product) => cartBloc.add(OnProductPressed(product)),
           );
         },
       ),

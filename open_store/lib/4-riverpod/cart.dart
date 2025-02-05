@@ -1,43 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:open_store/3-provider/state/provider_cart.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:open_store/4-riverpod/state/riverpod_cart.dart';
 import 'package:open_store/common/product.dart';
 import 'package:open_store/common/product_tile.dart';
-import 'package:provider/provider.dart';
 
-class Cart extends StatelessWidget {
+class Cart extends ConsumerWidget {
   const Cart({
     super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
-    List<Product> cartProductList = context.select<ProviderCart, List<Product>>(
-      (providerCart) => providerCart.cartProductList,
-    );
+  Widget build(BuildContext context, WidgetRef ref) {
+    final List<Product> cartProductList = ref.watch(cartProvider);
 
     return Scaffold(
       body: cartProductList.isEmpty
 
-          /// Empty
+      /// Empty
           ? const Center(
-              child: Text(
-                "Empty",
-                style: TextStyle(fontSize: 24, color: Colors.grey),
-              ),
-            )
+        child: Text(
+          "Empty",
+          style: TextStyle(fontSize: 24, color: Colors.grey),
+        ),
+      )
 
-          /// Not Empty
+      /// Not Empty
           : ListView.builder(
-              itemCount: cartProductList.length,
-              itemBuilder: (context, index) {
-                Product product = cartProductList[index];
-                return ProductTile(
-                  product: product,
-                  isInCart: true,
-                  onPressed: context.read<ProviderCart>().onProductPressed,
-                );
-              },
-            ),
+        itemCount: cartProductList.length,
+        itemBuilder: (context, index) {
+          Product product = cartProductList[index];
+          return ProductTile(
+            product: product,
+            isInCart: true,
+            onPressed: ref.read(cartProvider.notifier).onProductPressed,
+          );
+        },
+      ),
     );
   }
 }

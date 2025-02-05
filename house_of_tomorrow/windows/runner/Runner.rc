@@ -89,11 +89,11 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "ko.co.devstory" "\0"
+            VALUE "CompanyName", "kr.co.choi1234" "\0"
             VALUE "FileDescription", "house_of_tomorrow" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "house_of_tomorrow" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2023 ko.co.devstory. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2025 kr.co.choi1234. All rights reserved." "\0"
             VALUE "OriginalFilename", "house_of_tomorrow.exe" "\0"
             VALUE "ProductName", "house_of_tomorrow" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"

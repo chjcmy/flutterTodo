@@ -1,10 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:open_store/3-provider/cart.dart';
-import 'package:open_store/3-provider/state/provider_badge.dart';
-import 'package:open_store/3-provider/state/provider_cart.dart';
-import 'package:open_store/3-provider/store.dart';
+import 'package:open_store/4-riverpod/cart.dart';
+import 'package:open_store/4-riverpod/state/riverpod_badge.dart';
+import 'package:open_store/4-riverpod/store.dart';
 import 'package:open_store/common/bottom_bar.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -19,17 +18,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-          create: (context) => ProviderCart(),
-        ),
-        ChangeNotifierProvider(
-          create: (context) => ProviderBadge(
-            providerCart: context.read(),
-          ),
-        )
-      ],
+    return ProviderScope(
       child: Scaffold(
         body: IndexedStack(
           index: currentIndex,
@@ -41,11 +30,10 @@ class _HomePageState extends State<HomePage> {
             Cart(),
           ],
         ),
-        bottomNavigationBar: Selector<ProviderBadge, int>(
-          selector: (context, providerBadge) => providerBadge.counter,
-          builder: (context, counter, child) => BottomBar(
+        bottomNavigationBar: Consumer(
+          builder: (context, ref, child) => BottomBar(
             currentIndex: currentIndex,
-            cartTotal: "$counter",
+            cartTotal: "${ref.watch(badgeProvider)}",
             onTap: (index) => setState(() {
               currentIndex = index;
             }),

@@ -11,10 +11,10 @@ class DarkTheme implements AppTheme {
   @override
   AppColor color = AppColor(
     surface: Palette.grey800,
-    background: Palette.black.withOpacity(0.55),
+    background: Palette.black.withValues(alpha: 0.55),
     text: Palette.grey100,
     subtext: Palette.grey500,
-    toastContainer: Palette.grey100.withOpacity(0.85),
+    toastContainer: Palette.grey100.withValues(alpha: 0.85),
     onToastContainer: Palette.grey800,
     hint: Palette.grey600,
     hintContainer: Palette.grey770,
@@ -40,7 +40,7 @@ class DarkTheme implements AppTheme {
   AppDeco deco = AppDeco(
     shadow: [
       BoxShadow(
-        color: Palette.black.withOpacity(0.35),
+        color: Palette.black.withValues(alpha: 0.35),
         blurRadius: 35,
       ),
     ],

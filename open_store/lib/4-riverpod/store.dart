@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:open_store/3-provider/state/provider_cart.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:open_store/4-riverpod/state/riverpod_cart.dart';
 import 'package:open_store/common/product.dart';
 import 'package:open_store/common/product_tile.dart';
-import 'package:provider/provider.dart';
 
-class Store extends StatelessWidget {
+class Store extends ConsumerWidget {
   const Store({
     super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
-    ProviderCart providerCart = context.watch<ProviderCart>();
-
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       body: ListView.builder(
         itemCount: storeProductList.length,
@@ -20,8 +18,8 @@ class Store extends StatelessWidget {
           Product product = storeProductList[index];
           return ProductTile(
             product: product,
-            isInCart: providerCart.cartProductList.contains(product),
-            onPressed: providerCart.onProductPressed,
+            isInCart: ref.watch(cartProvider).contains(product),
+            onPressed: ref.read(cartProvider.notifier).onProductPressed,
           );
         },
       ),

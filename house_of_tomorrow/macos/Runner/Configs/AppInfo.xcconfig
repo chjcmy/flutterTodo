@@ -8,7 +8,7 @@
 PRODUCT_NAME = house_of_tomorrow
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = ko.co.devstory.houseOfTomorrow
+PRODUCT_BUNDLE_IDENTIFIER = kr.co.choi1234.houseOfTomorrow
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2023 ko.co.devstory. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2025 kr.co.choi1234. All rights reserved.

@@ -11,10 +11,10 @@ class LightTheme implements AppTheme {
   @override
   AppColor color = AppColor(
     surface: Palette.grey100,
-    background: Palette.black.withOpacity(0.55),
+    background: Palette.black.withValues(alpha: 0.55),
     text: Palette.black,
     subtext: Palette.grey700,
-    toastContainer: Palette.black.withOpacity(0.85),
+    toastContainer: Palette.black.withValues(alpha: 0.85),
     onToastContainer: Palette.grey100,
     hint: Palette.grey300,
     hintContainer: Palette.grey150,
@@ -40,7 +40,7 @@ class LightTheme implements AppTheme {
   AppDeco deco = AppDeco(
     shadow: [
       BoxShadow(
-        color: Palette.black.withOpacity(0.1),
+        color: Palette.black.withValues(alpha: 0.1),
         blurRadius: 35,
       ),
     ],

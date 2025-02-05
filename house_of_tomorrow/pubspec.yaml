@@ -31,13 +31,18 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutter_localizations:
+    sdk: flutter
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  provider: ^6.1.2
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  intl_utils: ^2.6.1
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -98,3 +103,7 @@ flutter:
           weight: 600
   assets:
     - assets/icons/
+flutter_intl:
+  enabled: true
+  arb_dir: lib/util/lang/l10n
+  output_dir: lib/util/lang/generated

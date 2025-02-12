@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:house_of_tomorrow/src/model/cart_item.dart';
 import 'package:house_of_tomorrow/src/model/product.dart';
-import 'package:house_of_tomorrow/src/service/cart_service.dart';
-import 'package:house_of_tomorrow/src/view/product/widget/product_bottom_sheet.dart';
+import 'package:house_of_tomorrow/src/view/base_view.dart';
+import 'package:house_of_tomorrow/src/view/product/product_view_model.dart';
 import 'package:house_of_tomorrow/src/view/product/widget/product_color_preview.dart';
 import 'package:house_of_tomorrow/src/view/product/widget/product_desc.dart';
+import 'package:house_of_tomorrow/src/view/product/widget/product_layout.dart';
 import 'package:house_of_tomorrow/theme/component/cart_button.dart';
 import 'package:house_of_tomorrow/theme/component/color_picker.dart';
 import 'package:house_of_tomorrow/theme/component/pop_button.dart';
-import 'package:house_of_tomorrow/theme/component/toast/toast.dart';
 import 'package:house_of_tomorrow/util/lang/generated/l10n.dart';
 import 'package:provider/provider.dart';
 
-class ProductView extends StatefulWidget {
+import 'widget/product_bottom_sheet.dart';
+
+class ProductView extends StatelessWidget {
   const ProductView({
     super.key,
     required this.product,
@@ -21,96 +22,58 @@ class ProductView extends StatefulWidget {
   final Product product;
 
   @override
-  State<ProductView> createState() => _ProductViewState();
-}
-
-class _ProductViewState extends State<ProductView> {
-
-  /// 선택한 수량
-  int count = 1;
-
-  /// 선택한 색상
-  int colorIndex = 0;
-
-  /// 수량 업데이트 이벤트 함수
-  void onCountChanged(int newCount) {
-    setState(() {
-      count = newCount;
-    });
-
-  }
-
-  /// 색상 업데이트 이벤트 함수
-  void onColorIndexChanged(int newColorIndex) {
-    setState(() {
-      colorIndex = newColorIndex;
-    });
-
-  }
-
-  /// 카트에 상품 추가
-  void onAddToCartPressed() {
-    final CartService cartService = context.read();
-    final CartItem newCartItem = CartItem(
-      colorIndex: colorIndex,
-      count: count,
-      isSelected: true,
-      product: widget.product,
-    );
-    cartService.add(newCartItem);
-    Toast.show(S.current.productAdded(widget.product.name));
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(S.current.product),
-        leading: const PopButton(),
-        titleSpacing: 0,
-        actions: [
-          /// 카트 버튼
-          const CartButton(),
-        ],
+    return BaseView(
+      viewModel: ProductViewModel(
+        product: product,
+        cartService: context.read(),
       ),
-      body: Column(
-        children: [
-          Expanded(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(vertical: 32),
-              child: Wrap(
-                runSpacing: 32,
-                alignment: WrapAlignment.center,
-                children: [
-                  /// ProductColorPreview
-                  ProductColorPreview(
-                    colorIndex: colorIndex,
-                    product: widget.product,
-                  ),
+      builder: (context, viewModel) => Scaffold(
+        appBar: AppBar(
+          title: Text(S.current.product),
+          leading: const PopButton(),
+          titleSpacing: 0,
+          actions: const [
+            /// 카트 버튼
+            CartButton(),
+          ],
+        ),
+        body: ProductLayout(
+          productInfo: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(vertical: 32),
+            child: Wrap(
+              runSpacing: 32,
+              alignment: WrapAlignment.center,
+              children: [
+                /// ProductColorPreview
+                ProductColorPreview(
+                  colorIndex: viewModel.colorIndex,
+                  product: product,
+                ),
 
-                  /// ColorPicker
-                  ColorPicker(
-                    colorIndex: colorIndex,
-                    colorList: widget.product.productColorList.map((e) {
-                      return e.color;
-                    }).toList(),
-                    onColorSelected: onColorIndexChanged,
-                  ),
+                /// ColorPicker
+                ColorPicker(
+                  colorIndex: viewModel.colorIndex,
+                  colorList: product.productColorList.map((e) {
+                    return e.color;
+                  }).toList(),
+                  onColorSelected: viewModel.onColorIndexChanged,
+                ),
 
-                  /// ProductDesc
-                  ProductDesc(product: widget.product),
-                ],
-              ),
+                /// ProductDesc
+                ProductDesc(product: product),
+              ],
             ),
           ),
 
           /// ProductBottomSheet
-          ProductBottomSheet(
-            count: count,
-            product: widget.product,
-            onCountChanged: onCountChanged,
-            onAddToCartPressed: onAddToCartPressed,          ),
-        ],
+          productBottomSheet: ProductBottomSheet(
+            count: viewModel.count,
+            product: product,
+            onCountChanged: viewModel.onCountChanged,
+            onAddToCartPressed: viewModel.onAddToCartPressed,
+          ),
+        ),
       ),
     );
   }

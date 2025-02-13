@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:house_of_tomorrow/src/service/theme_service.dart';
 import 'package:house_of_tomorrow/theme/component/bottom_sheet/setting_bottom_sheet.dart';
 import 'package:house_of_tomorrow/theme/component/button/button.dart';
+import 'package:house_of_tomorrow/theme/component/input_field.dart';
 import 'package:house_of_tomorrow/util/lang/generated/l10n.dart';
 
 class ShoppingView extends ConsumerWidget {
@@ -28,13 +28,32 @@ class ShoppingView extends ConsumerWidget {
           ),
         ],
       ),
-      body: Center(
-        child: TextButton(
-          onPressed: () {
-            ref.themeService.toggleTheme(); // 테마 전환 호출
-          },
-          child: Text("Toggle Theme", style: ref.typo.headline6),
-        ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16,
+              vertical: 8,
+            ),
+            child: Row(
+              children: [
+                /// 검색
+                Expanded(
+                  child: InputField(
+                    hint: S.current.searchProduct,
+                  ),
+                ),
+                const SizedBox(width: 16),
+
+                /// 검색 버튼
+                Button(
+                  icon: 'search',
+                  onPressed: () {},
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

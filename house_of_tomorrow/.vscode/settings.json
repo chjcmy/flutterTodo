@@ -1,0 +1,7 @@
+{
+    "git.ignoreLimitWarning": true,
+    "dart.previewFlutterUiGuides": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+}

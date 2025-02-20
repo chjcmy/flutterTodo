@@ -28,53 +28,60 @@ class _InputFiledState extends ConsumerState<InputField> {
       widget.controller ?? TextEditingController();
 
   @override
-  Widget build(BuildContext context) {
-    return TextField(
-      controller: controller,
-      onChanged: (value) {
-        setState(() {});
-        widget.onChanged?.call(value);
-      },
-      onSubmitted: widget.onSubmitted,
-      decoration: InputDecoration(
-        border: OutlineInputBorder(
-          /// 테두리 삭제
-          borderSide: const BorderSide(
-            width: 0,
-            style: BorderStyle.none,
+  void dispose() {
+    // ✅ 만약 컨트롤러를 직접 생성한 경우, `dispose()` 호출
+    if (widget.controller == null) {
+      controller.dispose();
+    }
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => TextField(
+        controller: controller,
+        onChanged: (value) {
+          setState(() {});
+          widget.onChanged?.call(value);
+        },
+        onSubmitted: widget.onSubmitted,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(
+            /// 테두리 삭제
+            borderSide: const BorderSide(
+              width: 0,
+              style: BorderStyle.none,
+            ),
+
+            /// 테두리 모서리 둥글게
+            borderRadius: BorderRadius.circular(12),
           ),
 
-          /// 테두리 모서리 둥글게
-          borderRadius: BorderRadius.circular(12),
+          /// 배경 색상
+          filled: true,
+          fillColor: ref.color.hintContainer,
+
+          hintStyle: ref.typo.headline5.copyWith(
+              fontWeight: ref.typo.light, color: ref.color.onHintContainer),
+
+          hintText: widget.hint,
+
+          /// padding
+          contentPadding: const EdgeInsets.symmetric(
+            vertical: 11.5,
+            horizontal: 16,
+          ),
+
+          suffixIcon: controller.text.isEmpty
+              ? null
+              : Button(
+                  icon: 'close',
+                  type: ButtonType.flat,
+                  onPressed: () {
+                    setState(() {
+                      controller.clear();
+                      widget.onClear?.call();
+                    });
+                  }),
         ),
-
-        /// 배경 색상
-        filled: true,
-        fillColor: ref.color.hintContainer,
-
-        hintStyle: ref.typo.headline5.copyWith(
-            fontWeight: ref.typo.light, color: ref.color.onHintContainer),
-
-        hintText: widget.hint,
-
-        /// padding
-        contentPadding: const EdgeInsets.symmetric(
-          vertical: 11.5,
-          horizontal: 16,
-        ),
-
-        suffixIcon: controller.text.isNotEmpty
-            ? null
-            : Button(
-                icon: 'close',
-                type: ButtonType.flat,
-                onPressed: () {
-                  setState(() {
-                    controller.clear();
-                    widget.onClear?.call();
-                  });
-                }),
-      ),
-    );
-  }
+      );
 }

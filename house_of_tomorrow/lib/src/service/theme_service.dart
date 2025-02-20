@@ -5,7 +5,7 @@ import 'package:house_of_tomorrow/theme/foundation/app_theme.dart';
 import 'package:house_of_tomorrow/theme/light_theme.dart';
 
 final themeServiceProvider =
-NotifierProvider<ThemeService, AppTheme>(ThemeService.new);
+    NotifierProvider<ThemeService, AppTheme>(ThemeService.new);
 
 class ThemeService extends Notifier<AppTheme> {
   @override

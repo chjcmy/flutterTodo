@@ -5,11 +5,11 @@ import 'package:house_of_tomorrow/src/service/theme_service.dart';
 
 class AssetIcon extends ConsumerWidget {
   const AssetIcon(
-      this.icon, {
-        super.key,
-        this.color,
-        this.size,
-      });
+    this.icon, {
+    super.key,
+    this.color,
+    this.size,
+  });
 
   final String icon;
   final Color? color;

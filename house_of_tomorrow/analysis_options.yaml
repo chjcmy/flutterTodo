@@ -9,6 +9,21 @@
 # packages, and plugins designed to encourage good coding practices.
 include: package:flutter_lints/flutter.yaml
 
+analyzer:
+  errors:
+    missing_required_param: error  # 필수 매개변수 누락 시 에러
+    missing_return: error          # 반환값 없는 함수에서 에러 발생
+    dead_code: warning             # 사용되지 않는 코드 경고
+    todo: ignore                   # TODO 주석을 무시 (경고 제거)
+    prefer_relative_imports: warning # 상대 경로 import를 권장
+
+  exclude:
+    - "**.g.dart"       # 코드 생성 파일 제외 (Freezed, JsonSerializable 등)
+    - "**.freezed.dart" # Freezed 데이터 클래스
+    - "**.config.dart"  # 환경설정 자동 생성 파일
+    - "**/*.gr.dart"    # AutoRoute 생성 파일
+
+
 linter:
   # The lint rules applied to this project can be customized in the
   # section below to disable rules from the `package:flutter_lints/flutter.yaml`
@@ -21,8 +36,26 @@ linter:
   # `// ignore_for_file: name_of_lint` syntax on the line or in the file
   # producing the lint.
   rules:
-    # avoid_print: false  # Uncomment to disable the `avoid_print` rule
-    # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+    # ✅ 스타일 관련 규칙
+    prefer_single_quotes: true      # 작은 따옴표 사용 권장 ('')
+    avoid_print: true               # print() 사용 금지 (Logger 패키지 활용 추천)
+    always_use_package_imports: true # 절대 경로 import 사용 (예: 'package:app/utils.dart')
+    
+    # ✅ Flutter 코드 품질 관련 규칙
+    avoid_unnecessary_containers: true  # 불필요한 Container() 사용 방지
+    prefer_const_constructors: true    # 가능한 경우 const 생성자 사용
+    prefer_final_fields: true          # 변경되지 않는 변수는 final 사용
+    use_key_in_widget_constructors: true # 모든 위젯 생성자에 `Key` 추가
 
+    # ✅ Null Safety 관련 규칙
+    avoid_null_checks_in_equality_operators: true  # `==`에서 null 체크 금지
+    avoid_returning_null: true                     # null 반환 방지
+    prefer_null_aware_operators: true             # ?. ?? 연산자 사용 권장
+
+    # ✅ 성능 및 최적화
+    use_setters_to_change_properties: true  # Getter/Setter 권장
+    avoid_slow_async_io: true               # 느린 I/O 경고
+    unnecessary_lambdas: true               # 불필요한 람다 함수 방지
+    prefer_expression_function_bodies: true # 함수 본문 한 줄 표현식 권장
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options

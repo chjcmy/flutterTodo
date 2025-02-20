@@ -58,24 +58,24 @@ class _ButtonState extends ConsumerState<Button> {
 
   /// Text & Icon Color
   Color get color => widget.type.getColor(
-    ref,
-    isInactive,
-    widget.color,
-  );
+        ref,
+        isInactive,
+        widget.color,
+      );
 
   /// Background Color
   Color get backgroundColor => widget.type.getBackgroundColor(
-    ref,
-    isInactive,
-    widget.backgroundColor,
-  );
+        ref,
+        isInactive,
+        widget.backgroundColor,
+      );
 
   /// Border
   Border? get border => widget.type.getBorder(
-    ref,
-    isInactive,
-    widget.borderColor,
-  );
+        ref,
+        isInactive,
+        widget.borderColor,
+      );
 
   /// 버튼 클릭 이벤트
   void onPressed(bool newIsPressed) {
@@ -128,9 +128,9 @@ class _ButtonState extends ConsumerState<Button> {
               Text(
                 widget.text!,
                 style: widget.size.getTextStyle(ref).copyWith(
-                  color: color,
-                  fontWeight: ref.typo.semiBold,
-                ),
+                      color: color,
+                      fontWeight: ref.typo.semiBold,
+                    ),
               ),
           ],
         ),

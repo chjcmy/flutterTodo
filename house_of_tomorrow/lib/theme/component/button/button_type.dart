@@ -8,10 +8,10 @@ enum ButtonType {
 
   /// 텍스트 & 아이콘 색상
   Color getColor(
-      WidgetRef ref,
-      bool isInactive, [
-        Color? color,
-      ]) {
+    WidgetRef ref,
+    bool isInactive, [
+    Color? color,
+  ]) {
     switch (this) {
       case ButtonType.fill:
         return isInactive
@@ -25,10 +25,10 @@ enum ButtonType {
 
   /// 배경 색상
   Color getBackgroundColor(
-      WidgetRef ref,
-      bool isInactive, [
-        Color? color,
-      ]) {
+    WidgetRef ref,
+    bool isInactive, [
+    Color? color,
+  ]) {
     switch (this) {
       case ButtonType.fill:
         return isInactive
@@ -42,10 +42,10 @@ enum ButtonType {
 
   /// 테두리
   Border? getBorder(
-      WidgetRef ref,
-      bool isInactive, [
-        Color? color,
-      ]) {
+    WidgetRef ref,
+    bool isInactive, [
+    Color? color,
+  ]) {
     switch (this) {
       case ButtonType.fill:
       case ButtonType.flat:

@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:house_of_tomorrow/src/service/theme_service.dart';
+import 'package:house_of_tomorrow/theme/component/asset_icon.dart';
+
+class Rating extends ConsumerWidget {
+  const Rating({
+    super.key,
+    required this.rating,
+  });
+
+  final String rating;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        AssetIcon(
+          'star',
+          color: ref.color.tertiary,
+          size: 20,
+        ),
+        const SizedBox(width: 6),
+        Text(
+          rating,
+          style: ref.typo.body1.copyWith(
+            color: ref.color.subtext,
+            fontWeight: ref.typo.light,
+          ),
+        ),
+      ],
+    );
+  }
+}

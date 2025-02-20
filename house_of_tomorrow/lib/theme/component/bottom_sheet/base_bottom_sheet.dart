@@ -20,20 +20,19 @@ class BaseBottomSheet extends ConsumerWidget {
     // TODO: implement build
     return Container(
       decoration: BoxDecoration(
-        color: ref.color.surface,
-        borderRadius: isRoundAll ?? false
-          ? BorderRadius.circular(24)
-            : const BorderRadius.only(
-          topLeft: Radius.circular(24),
-          topRight: Radius.circular(24),
-        ),
-        boxShadow: ref.deco.shadow
-      ),
+          color: ref.color.surface,
+          borderRadius: isRoundAll ?? false
+              ? BorderRadius.circular(24)
+              : const BorderRadius.only(
+                  topLeft: Radius.circular(24),
+                  topRight: Radius.circular(24),
+                ),
+          boxShadow: ref.deco.shadow),
       padding: padding ??
-        const EdgeInsets.only(
-          top: 32,
-          bottom: 16,
-        ),
+          const EdgeInsets.only(
+            top: 32,
+            bottom: 16,
+          ),
       child: SafeArea(
         child: child,
       ),

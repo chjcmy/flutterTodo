@@ -13,10 +13,8 @@ abstract class IntlHelper {
   static String currency({
     required String symbol,
     required int number,
-  }) {
-    return NumberFormat.currency(
+  }) => NumberFormat.currency(
       symbol: symbol,
       locale: (symbol == '￦' ? ko : en).languageCode,
     ).format(number);
-  }
 }

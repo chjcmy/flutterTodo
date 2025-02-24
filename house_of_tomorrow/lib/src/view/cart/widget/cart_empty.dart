@@ -7,8 +7,7 @@ class CartEmpty extends ConsumerWidget {
   const CartEmpty({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Center(
+  Widget build(BuildContext context, WidgetRef ref) => Center(
       child: Text(
         S.current.cartIsEmpty,
         style: ref.typo.headline4.copyWith(
@@ -17,5 +16,4 @@ class CartEmpty extends ConsumerWidget {
         ),
       ),
     );
-  }
 }

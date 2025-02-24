@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'foundation/app_theme.dart';
-import 'res/palette.dart';
-import 'res/typo.dart';
+import 'package:house_of_tomorrow/theme/foundation/app_theme.dart';
+import 'package:house_of_tomorrow/theme/res/palette.dart';
+import 'package:house_of_tomorrow/theme/res/typo.dart';
 
 class LightTheme implements AppTheme {
   @override

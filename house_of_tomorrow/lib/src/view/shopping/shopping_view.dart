@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_single_quotes
+
 import 'dart:convert';
 import 'dart:developer'; // ✅ log 사용 추가
 
@@ -37,9 +39,7 @@ class _ShoppingViewState extends ConsumerState<ShoppingView> {
       );
 
       setState(() {
-        productList = jsonDecode(res.data).map<Product>((json) {
-          return Product.fromJson(json);
-        }).where((products) {
+        productList = jsonDecode(res.data).map<Product>((json) => Product.fromJson(json)).where((products) {
           if (keyword.isEmpty) return true;
 
           return "${products.name}${products.brand}}"
@@ -61,8 +61,7 @@ class _ShoppingViewState extends ConsumerState<ShoppingView> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return HideKeyboard(
+  Widget build(BuildContext context) => HideKeyboard(
       child: Scaffold(
         appBar: AppBar(
           title: Text(S.current.shopping),
@@ -74,9 +73,7 @@ class _ShoppingViewState extends ConsumerState<ShoppingView> {
               onPressed: () {
                 showModalBottomSheet(
                   context: context,
-                  builder: (context) {
-                    return const SettingBottomSheet();
-                  },
+                  builder: (context) => const SettingBottomSheet(),
                 );
               },
             ),
@@ -120,5 +117,4 @@ class _ShoppingViewState extends ConsumerState<ShoppingView> {
         ),
       ),
     );
-  }
 }

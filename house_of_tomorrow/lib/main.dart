@@ -18,6 +18,11 @@ class MyApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) => MaterialApp(
         navigatorKey: navigatorKey,
+        builder: (context, child) => Overlay(
+          initialEntries: [
+            OverlayEntry(builder: (context) => child!),
+          ],
+        ),
         debugShowCheckedModeBanner: false,
         localizationsDelegates: [
           S.delegate,

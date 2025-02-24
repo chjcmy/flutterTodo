@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/service/theme_service.dart';
 
@@ -16,9 +15,7 @@ class BaseBottomSheet extends ConsumerWidget {
   final bool? isRoundAll;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    // TODO: implement build
-    return Container(
+  Widget build(BuildContext context, WidgetRef ref) => Container(
       decoration: BoxDecoration(
           color: ref.color.surface,
           borderRadius: isRoundAll ?? false
@@ -37,5 +34,4 @@ class BaseBottomSheet extends ConsumerWidget {
         child: child,
       ),
     );
-  }
 }

@@ -14,8 +14,7 @@ class ProductDesc extends ConsumerWidget {
   final Product product;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Padding(
+  Widget build(BuildContext context, WidgetRef ref) => Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Column(
         children: [
@@ -42,5 +41,4 @@ class ProductDesc extends ConsumerWidget {
         ],
       ),
     );
-  }
 }

@@ -9,10 +9,8 @@ class ProductColor {
     required this.color,
   });
 
-  factory ProductColor.fromJson(Map<String, dynamic> json) {
-    return ProductColor(
+  factory ProductColor.fromJson(Map<String, dynamic> json) => ProductColor(
       color: Color(int.tryParse(json['hexColor']) ?? 0xFF000000),
       imageUrl: json['imageUrl'] ?? '',
     );
-  }
 }

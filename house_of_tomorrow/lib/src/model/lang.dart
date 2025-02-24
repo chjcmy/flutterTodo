@@ -9,12 +9,10 @@ class Lang {
     required this.en,
   });
 
-  factory Lang.fromJson(Map<String, dynamic> json) {
-    return Lang(
+  factory Lang.fromJson(Map<String, dynamic> json) => Lang(
       ko: json['ko'] as String,
       en: json['en'] as String,
     );
-  }
 
   @override
   String toString() => IntlHelper.isKo ? ko : en;

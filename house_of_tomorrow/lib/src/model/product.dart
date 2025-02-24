@@ -20,17 +20,13 @@ class Product {
     required this.productColorList,
   });
 
-  factory Product.fromJson(Map<String, dynamic> json) {
-    return Product(
+  factory Product.fromJson(Map<String, dynamic> json) => Product(
       name: Lang.fromJson(json['name'] ?? {}),
       brand: Lang.fromJson(json['brand'] ?? {}),
       desc: Lang.fromJson(json['desc'] ?? {}),
       rating: json['rating'] ?? '0.0',
       priceUnit: json['priceUnit'] ?? '₩',
       price: json['price'] ?? 0,
-      productColorList: (json['colorList'] ?? []).map<ProductColor>((c) {
-        return ProductColor.fromJson(c);
-      }).toList(),
+      productColorList: (json['colorList'] ?? []).map<ProductColor>((c) => ProductColor.fromJson(c)).toList(),
     );
-  }
 }

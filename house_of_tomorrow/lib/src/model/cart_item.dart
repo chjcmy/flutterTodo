@@ -21,12 +21,10 @@ class CartItem {
     int? colorIndex,
     int? count,
     bool? isSelected,
-  }) {
-    return CartItem(
+  }) => CartItem(
       product: product ?? this.product,
       colorIndex: colorIndex ?? this.colorIndex,
       count: count ?? this.count,
       isSelected: isSelected ?? this.isSelected,
     );
-  }
 }

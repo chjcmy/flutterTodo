@@ -1,4 +1,4 @@
-==== ./test/widget_test.dart ====
+===== ./test/widget_test.dart =====
 // This is a basic Flutter widget test.
 //
 // To perform an interaction with a widget in your test, use the WidgetTester
@@ -32,7 +32,7 @@ void main() {
 
 
 
-==== ./lib/util/lang/generated/intl/messages_ko.dart ====
+===== ./lib/util/lang/generated/intl/messages_ko.dart =====
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
 // This is a library that provides messages for a ko locale. All the
 // messages from the main program should be duplicated here with the same
@@ -101,7 +101,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
 
 
-==== ./lib/util/lang/generated/intl/messages_all.dart ====
+===== ./lib/util/lang/generated/intl/messages_all.dart =====
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
 // This is a library that looks up messages for specific locales by
 // delegating to the appropriate library.
@@ -120,8 +120,8 @@ import 'package:intl/intl.dart';
 import 'package:intl/message_lookup_by_library.dart';
 import 'package:intl/src/intl_helpers.dart';
 
-import 'messages_en.dart' as messages_en;
-import 'messages_ko.dart' as messages_ko;
+import 'package:house_of_tomorrow/util/lang/generated/intl/messages_en.dart' as messages_en;
+import 'package:house_of_tomorrow/util/lang/generated/intl/messages_ko.dart' as messages_ko;
 
 typedef Future<dynamic> LibraryLoader();
 Map<String, LibraryLoader> _deferredLibraries = {
@@ -177,7 +177,7 @@ MessageLookupByLibrary? _findGeneratedMessagesFor(String locale) {
 
 
 
-==== ./lib/util/lang/generated/intl/messages_en.dart ====
+===== ./lib/util/lang/generated/intl/messages_en.dart =====
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
 // This is a library that provides messages for a en locale. All the
 // messages from the main program should be duplicated here with the same
@@ -248,7 +248,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
 
 
-==== ./lib/util/lang/generated/l10n.dart ====
+===== ./lib/util/lang/generated/l10n.dart =====
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -302,200 +302,142 @@ class S {
     return instance!;
   }
 
-  static S? maybeOf(BuildContext context) {
-    return Localizations.of<S>(context, S);
-  }
+  static S? maybeOf(BuildContext context) => Localizations.of<S>(context, S);
 
   /// `Shopping`
-  String get shopping {
-    return Intl.message('Shopping', name: 'shopping', desc: '', args: []);
-  }
+  String get shopping => Intl.message('Shopping', name: 'shopping', desc: '', args: []);
 
   /// `Theme`
-  String get theme {
-    return Intl.message('Theme', name: 'theme', desc: '', args: []);
-  }
+  String get theme => Intl.message('Theme', name: 'theme', desc: '', args: []);
 
   /// `Light`
-  String get light {
-    return Intl.message('Light', name: 'light', desc: '', args: []);
-  }
+  String get light => Intl.message('Light', name: 'light', desc: '', args: []);
 
   /// `Dark`
-  String get dark {
-    return Intl.message('Dark', name: 'dark', desc: '', args: []);
-  }
+  String get dark => Intl.message('Dark', name: 'dark', desc: '', args: []);
 
   /// `Language`
-  String get language {
-    return Intl.message('Language', name: 'language', desc: '', args: []);
-  }
+  String get language => Intl.message('Language', name: 'language', desc: '', args: []);
 
   /// `English`
-  String get en {
-    return Intl.message('English', name: 'en', desc: '', args: []);
-  }
+  String get en => Intl.message('English', name: 'en', desc: '', args: []);
 
   /// `Korean`
-  String get ko {
-    return Intl.message('Korean', name: 'ko', desc: '', args: []);
-  }
+  String get ko => Intl.message('Korean', name: 'ko', desc: '', args: []);
 
   /// `Product`
-  String get product {
-    return Intl.message('Product', name: 'product', desc: '', args: []);
-  }
+  String get product => Intl.message('Product', name: 'product', desc: '', args: []);
 
   /// `Quantity`
-  String get quantity {
-    return Intl.message('Quantity', name: 'quantity', desc: '', args: []);
-  }
+  String get quantity => Intl.message('Quantity', name: 'quantity', desc: '', args: []);
 
   /// `Search product`
-  String get searchProduct {
-    return Intl.message(
+  String get searchProduct => Intl.message(
       'Search product',
       name: 'searchProduct',
       desc: '',
       args: [],
     );
-  }
 
   /// `There is no product.`
-  String get noProduct {
-    return Intl.message(
+  String get noProduct => Intl.message(
       'There is no product.',
       name: 'noProduct',
       desc: '',
       args: [],
     );
-  }
 
   /// `Description`
-  String get description {
-    return Intl.message('Description', name: 'description', desc: '', args: []);
-  }
+  String get description => Intl.message('Description', name: 'description', desc: '', args: []);
 
   /// `Add to cart`
-  String get addToCart {
-    return Intl.message('Add to cart', name: 'addToCart', desc: '', args: []);
-  }
+  String get addToCart => Intl.message('Add to cart', name: 'addToCart', desc: '', args: []);
 
   /// `{name} was added`
-  String productAdded(Object name) {
-    return Intl.message(
+  String productAdded(Object name) => Intl.message(
       '$name was added',
       name: 'productAdded',
       desc: '',
       args: [name],
     );
-  }
 
   /// `Total Price`
-  String get totalPrice {
-    return Intl.message('Total Price', name: 'totalPrice', desc: '', args: []);
-  }
+  String get totalPrice => Intl.message('Total Price', name: 'totalPrice', desc: '', args: []);
 
   /// `Cart`
-  String get cart {
-    return Intl.message('Cart', name: 'cart', desc: '', args: []);
-  }
+  String get cart => Intl.message('Cart', name: 'cart', desc: '', args: []);
 
   /// `Delete`
-  String get delete {
-    return Intl.message('Delete', name: 'delete', desc: '', args: []);
-  }
+  String get delete => Intl.message('Delete', name: 'delete', desc: '', args: []);
 
   /// `Cancel`
-  String get cancel {
-    return Intl.message('Cancel', name: 'cancel', desc: '', args: []);
-  }
+  String get cancel => Intl.message('Cancel', name: 'cancel', desc: '', args: []);
 
   /// `Do you want to delete the selected product?`
-  String get deleteDialogDesc {
-    return Intl.message(
+  String get deleteDialogDesc => Intl.message(
       'Do you want to delete the selected product?',
       name: 'deleteDialogDesc',
       desc: '',
       args: [],
     );
-  }
 
   /// `The selected items has been deleted.`
-  String get deleteDialogSuccessToast {
-    return Intl.message(
+  String get deleteDialogSuccessToast => Intl.message(
       'The selected items has been deleted.',
       name: 'deleteDialogSuccessToast',
       desc: '',
       args: [],
     );
-  }
 
   /// `There is no items in the cart.`
-  String get cartIsEmpty {
-    return Intl.message(
+  String get cartIsEmpty => Intl.message(
       'There is no items in the cart.',
       name: 'cartIsEmpty',
       desc: '',
       args: [],
     );
-  }
 
   /// `Checkout`
-  String get checkout {
-    return Intl.message('Checkout', name: 'checkout', desc: '', args: []);
-  }
+  String get checkout => Intl.message('Checkout', name: 'checkout', desc: '', args: []);
 
   /// `Would you like to purchase the selected product?`
-  String get checkoutDialogDesc {
-    return Intl.message(
+  String get checkoutDialogDesc => Intl.message(
       'Would you like to purchase the selected product?',
       name: 'checkoutDialogDesc',
       desc: '',
       args: [],
     );
-  }
 
   /// `Purchased successfully.`
-  String get checkoutDialogSuccessToast {
-    return Intl.message(
+  String get checkoutDialogSuccessToast => Intl.message(
       'Purchased successfully.',
       name: 'checkoutDialogSuccessToast',
       desc: '',
       args: [],
     );
-  }
 
   /// `Selected Items`
-  String get selectedItems {
-    return Intl.message(
+  String get selectedItems => Intl.message(
       'Selected Items',
       name: 'selectedItems',
       desc: '',
       args: [],
     );
-  }
 
   /// `{n} items`
-  String items(Object n) {
-    return Intl.message('$n items', name: 'items', desc: '', args: [n]);
-  }
+  String items(Object n) => Intl.message('$n items', name: 'items', desc: '', args: [n]);
 
   /// `Welcome`
-  String get welcome {
-    return Intl.message('Welcome', name: 'welcome', desc: '', args: []);
-  }
+  String get welcome => Intl.message('Welcome', name: 'welcome', desc: '', args: []);
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   const AppLocalizationDelegate();
 
-  List<Locale> get supportedLocales {
-    return const <Locale>[
+  List<Locale> get supportedLocales => const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
       Locale.fromSubtags(languageCode: 'ko'),
     ];
-  }
 
   @override
   bool isSupported(Locale locale) => _isSupported(locale);
@@ -516,7 +458,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
 
 
 
-==== ./lib/util/route_path.dart ====
+===== ./lib/util/route_path.dart =====
 import 'package:flutter/material.dart';
 import 'package:house_of_tomorrow/src/model/product.dart';
 import 'package:house_of_tomorrow/src/view/cart/cart_view.dart';
@@ -539,7 +481,7 @@ abstract class RoutePath {
         page = ProductView(product: product);
         break;
       case RoutePath.cart:
-        page = CartView();
+        page = const CartView();
         break;
     }
 
@@ -551,43 +493,41 @@ abstract class RoutePath {
 
 
 
-==== ./lib/util/helper/network_helper.dart ====
+===== ./lib/util/helper/network_helper.dart =====
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final dioProvider = Provider<Dio>((ref) {
-  return Dio()
-    ..interceptors.add(InterceptorsWrapper(
-      onRequest: (options, handler) {
-        // 요청시
-        log('REQ : [${options.method}] ${options.path}');
-        return handler.next(options);
-      },
-      onResponse: (response, handler) {
-        // 수신시
-        log('RES : [${response.statusCode}] ${response.requestOptions.path}');
-        return handler.next(response);
-      },
-      onError: (DioException e, handler) {
-        // 에러시
-        log('ERR : [${e.response?.statusCode}] ${e.requestOptions.path}');
-        return handler.next(e);
-      },
-    ));
-});
+final dioProvider = Provider<Dio>((ref) => Dio()
+  ..interceptors.add(InterceptorsWrapper(
+    onRequest: (options, handler) {
+      // 요청시
+      log('REQ : [${options.method}] ${options.path}');
+      return handler.next(options);
+    },
+    onResponse: (response, handler) {
+      // 수신시
+      log('RES : [${response.statusCode}] ${response.requestOptions.path}');
+      return handler.next(response);
+    },
+    onError: (DioException e, handler) {
+      // 에러시
+      log('ERR : [${e.response?.statusCode}] ${e.requestOptions.path}');
+      return handler.next(e);
+    },
+  )));
 
 
 
-==== ./lib/util/helper/immutable_helper.dart ====
+===== ./lib/util/helper/immutable_helper.dart =====
 extension ImmutableHelper<T> on Iterable<T> {
   List<T> toImmutable() => List.unmodifiable(this);
 }
 
 
 
-==== ./lib/util/helper/intl_helper.dart ====
+===== ./lib/util/helper/intl_helper.dart =====
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -603,17 +543,15 @@ abstract class IntlHelper {
   static String currency({
     required String symbol,
     required int number,
-  }) {
-    return NumberFormat.currency(
+  }) => NumberFormat.currency(
       symbol: symbol,
       locale: (symbol == '￦' ? ko : en).languageCode,
     ).format(number);
-  }
 }
 
 
 
-==== ./lib/main.dart ====
+===== ./lib/main.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -629,36 +567,43 @@ void main() {
 class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
+  static final GlobalKey<NavigatorState> navigatorKey = GlobalKey();
+
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      localizationsDelegates: [
-        S.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: S.delegate.supportedLocales,
-      locale: ref.watch(langServiceProvider),
-      theme: ref.themeService.themeData,
-      themeMode: ref.watch(themeServiceProvider).brightness == Brightness.light
-          ? ThemeMode.light
-          : ThemeMode.dark,
-      initialRoute: RoutePath.shopping,
-      onGenerateRoute: RoutePath.onGenerateRoute,
-    );
-  }
+  Widget build(BuildContext context, WidgetRef ref) => MaterialApp(
+        navigatorKey: navigatorKey,
+        builder: (context, child) => Overlay(
+          initialEntries: [
+            OverlayEntry(builder: (context) => child!),
+          ],
+        ),
+        debugShowCheckedModeBanner: false,
+        localizationsDelegates: [
+          S.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: S.delegate.supportedLocales,
+        locale: ref.watch(langServiceProvider),
+        theme: ref.themeService.themeData,
+        themeMode:
+            ref.watch(themeServiceProvider).brightness == Brightness.light
+                ? ThemeMode.light
+                : ThemeMode.dark,
+        initialRoute: RoutePath.shopping,
+        onGenerateRoute: RoutePath.onGenerateRoute,
+      );
 }
 
 
 
-==== ./lib/theme/light_theme.dart ====
+===== ./lib/theme/light_theme.dart =====
 import 'package:flutter/material.dart';
 
-import 'foundation/app_theme.dart';
-import 'res/palette.dart';
-import 'res/typo.dart';
+import 'package:house_of_tomorrow/theme/foundation/app_theme.dart';
+import 'package:house_of_tomorrow/theme/res/palette.dart';
+import 'package:house_of_tomorrow/theme/res/typo.dart';
 
 class LightTheme implements AppTheme {
   @override
@@ -705,7 +650,7 @@ class LightTheme implements AppTheme {
 
 
 
-==== ./lib/theme/res/typo.dart ====
+===== ./lib/theme/res/typo.dart =====
 import 'package:flutter/material.dart';
 
 abstract class Typo {
@@ -740,7 +685,7 @@ class NotoSans implements Typo {
 
 
 
-==== ./lib/theme/res/palette.dart ====
+===== ./lib/theme/res/palette.dart =====
 import 'package:flutter/material.dart';
 
 abstract class Palette {
@@ -772,7 +717,40 @@ abstract class Palette {
 }
 
 
-==== ./lib/theme/foundation/app_theme.dart ====
+
+===== ./lib/theme/res/layout.dart =====
+import 'package:flutter/material.dart';
+
+abstract class Breakpoints {
+  static const double mobile = 600;
+  static const double tablet = 1000;
+  static const double desktop = 1190;
+
+  static const double bottomSheet = 600;
+}
+
+extension LayoutExt on BuildContext {
+  Size get screenSize => MediaQuery.of(this).size;
+
+  T layout<T>(
+    T base, {
+    T? mobile,
+    T? tablet,
+    T? desktop,
+  }) {
+    if (screenSize.width < Breakpoints.mobile) {
+      return mobile ?? base;
+    } else if (screenSize.width < Breakpoints.tablet) {
+      return tablet ?? base;
+    } else {
+      return desktop ?? base;
+    }
+  }
+}
+
+
+
+===== ./lib/theme/foundation/app_theme.dart =====
 import 'package:flutter/material.dart';
 import 'package:house_of_tomorrow/theme/res/typo.dart';
 
@@ -788,7 +766,8 @@ abstract class AppTheme {
 }
 
 
-==== ./lib/theme/foundation/app_typo.dart ====
+
+===== ./lib/theme/foundation/app_typo.dart =====
 part of 'app_theme.dart';
 
 class AppTypo {
@@ -886,7 +865,8 @@ class AppTypo {
 }
 
 
-==== ./lib/theme/foundation/app_color.dart ====
+
+===== ./lib/theme/foundation/app_color.dart =====
 part of 'app_theme.dart';
 
 class AppColor {
@@ -944,7 +924,7 @@ class AppColor {
 
 
 
-==== ./lib/theme/foundation/app_deco.dart ====
+===== ./lib/theme/foundation/app_deco.dart =====
 part of 'app_theme.dart';
 
 class AppDeco {
@@ -958,7 +938,7 @@ class AppDeco {
 
 
 
-==== ./lib/theme/component/input_field.dart ====
+===== ./lib/theme/component/input_field.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/service/theme_service.dart';
@@ -998,60 +978,58 @@ class _InputFiledState extends ConsumerState<InputField> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return TextField(
-      controller: controller,
-      onChanged: (value) {
-        setState(() {});
-        widget.onChanged?.call(value);
-      },
-      onSubmitted: widget.onSubmitted,
-      decoration: InputDecoration(
-        border: OutlineInputBorder(
-          /// 테두리 삭제
-          borderSide: const BorderSide(
-            width: 0,
-            style: BorderStyle.none,
+  Widget build(BuildContext context) => TextField(
+        controller: controller,
+        onChanged: (value) {
+          setState(() {});
+          widget.onChanged?.call(value);
+        },
+        onSubmitted: widget.onSubmitted,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(
+            /// 테두리 삭제
+            borderSide: const BorderSide(
+              width: 0,
+              style: BorderStyle.none,
+            ),
+
+            /// 테두리 모서리 둥글게
+            borderRadius: BorderRadius.circular(12),
           ),
 
-          /// 테두리 모서리 둥글게
-          borderRadius: BorderRadius.circular(12),
+          /// 배경 색상
+          filled: true,
+          fillColor: ref.color.hintContainer,
+
+          hintStyle: ref.typo.headline5.copyWith(
+              fontWeight: ref.typo.light, color: ref.color.onHintContainer),
+
+          hintText: widget.hint,
+
+          /// padding
+          contentPadding: const EdgeInsets.symmetric(
+            vertical: 11.5,
+            horizontal: 16,
+          ),
+
+          suffixIcon: controller.text.isEmpty
+              ? null
+              : Button(
+                  icon: 'close',
+                  type: ButtonType.flat,
+                  onPressed: () {
+                    setState(() {
+                      controller.clear();
+                      widget.onClear?.call();
+                    });
+                  }),
         ),
-
-        /// 배경 색상
-        filled: true,
-        fillColor: ref.color.hintContainer,
-
-        hintStyle: ref.typo.headline5.copyWith(
-            fontWeight: ref.typo.light, color: ref.color.onHintContainer),
-
-        hintText: widget.hint,
-
-        /// padding
-        contentPadding: const EdgeInsets.symmetric(
-          vertical: 11.5,
-          horizontal: 16,
-        ),
-
-        suffixIcon: controller.text.isEmpty
-            ? null
-            : Button(
-                icon: 'close',
-                type: ButtonType.flat,
-                onPressed: () {
-                  setState(() {
-                    controller.clear();
-                    widget.onClear?.call();
-                  });
-                }),
-      ),
-    );
-  }
+      );
 }
 
 
 
-==== ./lib/theme/component/tile.dart ====
+===== ./lib/theme/component/tile.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/service/theme_service.dart';
@@ -1115,7 +1093,36 @@ class Tile extends ConsumerWidget {
 
 
 
-==== ./lib/theme/component/counter_button.dart ====
+===== ./lib/theme/component/constrained_screen.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:house_of_tomorrow/src/service/theme_service.dart';
+import 'package:house_of_tomorrow/theme/res/layout.dart';
+
+class ConstrainedScreen extends ConsumerWidget {
+  const ConstrainedScreen({
+    super.key,
+    required this.child,
+  });
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) => Container(
+    alignment: Alignment.center,
+    color: ref.color.surface,
+    child: ConstrainedBox(
+          constraints: const BoxConstraints(
+            maxWidth: Breakpoints.desktop,
+          ),
+          child: child,
+        ),
+  );
+}
+
+
+
+===== ./lib/theme/component/counter_button.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/service/theme_service.dart';
@@ -1186,7 +1193,7 @@ class CounterButton extends ConsumerWidget {
 
 
 
-==== ./lib/theme/component/counter_badge.dart ====
+===== ./lib/theme/component/counter_badge.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/service/theme_service.dart';
@@ -1234,7 +1241,149 @@ class CounterBadge extends ConsumerWidget {
 
 
 
-==== ./lib/theme/component/asset_icon.dart ====
+===== ./lib/theme/component/toast/toast_builder.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:house_of_tomorrow/src/service/theme_service.dart';
+
+class ToastBuilder extends ConsumerStatefulWidget {
+  const ToastBuilder({
+    super.key,
+    required this.text,
+    required this.animDuration,
+  });
+
+  final String text;
+  final Duration animDuration;
+
+  @override
+  ConsumerState<ToastBuilder> createState() => ToastBuilderState();
+}
+
+class ToastBuilderState extends ConsumerState<ToastBuilder> {
+  bool _isShow = false;
+  bool get isShow => _isShow;
+
+  set isShow(bool value) {
+    setState(() {
+      _isShow = value;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    final Size screenSize = MediaQuery.of(context).size;
+
+    return Positioned(
+      bottom: screenSize.height * 0.25,
+      left: 0,
+      right: 0,
+      child: Center(
+        child: Container(
+          decoration: BoxDecoration(
+            color: ref.color.toastContainer,
+            borderRadius: BorderRadius.circular(16),
+          ),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 16,
+            vertical: 8,
+          ),
+          child: DefaultTextStyle(
+            style: ref.typo.headline6.copyWith(
+              color: ref.color.onToastContainer,
+            ),
+            child: Text(widget.text),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+===== ./lib/theme/component/toast/toast.dart =====
+import 'package:flutter/material.dart';
+import 'package:house_of_tomorrow/main.dart';
+import 'package:house_of_tomorrow/theme/component/toast/toast_builder.dart';
+
+abstract class Toast {
+  static void show(
+    String text, {
+    Duration duration = const Duration(seconds: 3),
+  }) async {
+    BuildContext? context = MyApp.navigatorKey.currentContext;
+    if (context == null) return;
+
+    GlobalKey<ToastBuilderState> toastKey = GlobalKey();
+    final overlay = Overlay.of(context);
+    const animDuration = Duration(milliseconds: 333);
+    final toast = OverlayEntry(
+      builder: (context) => ToastBuilder(
+        key: toastKey,
+        text: text,
+        animDuration: animDuration,
+      ),
+    );
+    overlay.insert(toast);
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      toastKey.currentState?.isShow = true;
+    });
+
+    await Future.delayed(duration);
+    toastKey.currentState?.isShow = false;
+    await Future.delayed(duration);
+    toast.remove();
+  }
+}
+
+
+
+===== ./lib/theme/component/base_dialog.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:house_of_tomorrow/src/service/theme_service.dart';
+
+class BaseDialog extends ConsumerWidget {
+  const BaseDialog({
+    super.key,
+    this.title,
+    this.content,
+    this.actions,
+  });
+
+  final String? title;
+  final Widget? content;
+  final List<Widget>? actions;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) => AlertDialog(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+      ),
+      backgroundColor: ref.color.surface,
+      titlePadding: const EdgeInsets.all(16),
+      contentPadding: const EdgeInsets.all(16).copyWith(
+        top: title != null ? 0 : 16,
+      ),
+      actionsPadding: const EdgeInsets.all(16),
+      title: title != null
+          ? Text(
+              title!,
+              style: ref.typo.headline2.copyWith(
+                fontWeight: ref.typo.semiBold,
+              ),
+            )
+          : null,
+      content: content,
+      actions: actions,
+    );
+}
+
+
+
+===== ./lib/theme/component/asset_icon.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -1242,11 +1391,11 @@ import 'package:house_of_tomorrow/src/service/theme_service.dart';
 
 class AssetIcon extends ConsumerWidget {
   const AssetIcon(
-      this.icon, {
-        super.key,
-        this.color,
-        this.size,
-      });
+    this.icon, {
+    super.key,
+    this.color,
+    this.size,
+  });
 
   final String icon;
   final Color? color;
@@ -1267,7 +1416,8 @@ class AssetIcon extends ConsumerWidget {
 }
 
 
-==== ./lib/theme/component/rating.dart ====
+
+===== ./lib/theme/component/rating.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/service/theme_service.dart';
@@ -1306,7 +1456,7 @@ class Rating extends ConsumerWidget {
 
 
 
-==== ./lib/theme/component/button/button_type.dart ====
+===== ./lib/theme/component/button/button_type.dart =====
 part of 'button.dart';
 
 /// 버튼 타입
@@ -1317,10 +1467,10 @@ enum ButtonType {
 
   /// 텍스트 & 아이콘 색상
   Color getColor(
-      WidgetRef ref,
-      bool isInactive, [
-        Color? color,
-      ]) {
+    WidgetRef ref,
+    bool isInactive, [
+    Color? color,
+  ]) {
     switch (this) {
       case ButtonType.fill:
         return isInactive
@@ -1334,10 +1484,10 @@ enum ButtonType {
 
   /// 배경 색상
   Color getBackgroundColor(
-      WidgetRef ref,
-      bool isInactive, [
-        Color? color,
-      ]) {
+    WidgetRef ref,
+    bool isInactive, [
+    Color? color,
+  ]) {
     switch (this) {
       case ButtonType.fill:
         return isInactive
@@ -1351,10 +1501,10 @@ enum ButtonType {
 
   /// 테두리
   Border? getBorder(
-      WidgetRef ref,
-      bool isInactive, [
-        Color? color,
-      ]) {
+    WidgetRef ref,
+    bool isInactive, [
+    Color? color,
+  ]) {
     switch (this) {
       case ButtonType.fill:
       case ButtonType.flat:
@@ -1368,7 +1518,8 @@ enum ButtonType {
 }
 
 
-==== ./lib/theme/component/button/button_size.dart ====
+
+===== ./lib/theme/component/button/button_size.dart =====
 part of 'button.dart';
 
 /// 버튼 크기
@@ -1401,7 +1552,8 @@ enum ButtonSize {
 }
 
 
-==== ./lib/theme/component/button/button.dart ====
+
+===== ./lib/theme/component/button/button.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/service/theme_service.dart';
@@ -1462,24 +1614,24 @@ class _ButtonState extends ConsumerState<Button> {
 
   /// Text & Icon Color
   Color get color => widget.type.getColor(
-    ref,
-    isInactive,
-    widget.color,
-  );
+        ref,
+        isInactive,
+        widget.color,
+      );
 
   /// Background Color
   Color get backgroundColor => widget.type.getBackgroundColor(
-    ref,
-    isInactive,
-    widget.backgroundColor,
-  );
+        ref,
+        isInactive,
+        widget.backgroundColor,
+      );
 
   /// Border
   Border? get border => widget.type.getBorder(
-    ref,
-    isInactive,
-    widget.borderColor,
-  );
+        ref,
+        isInactive,
+        widget.borderColor,
+      );
 
   /// 버튼 클릭 이벤트
   void onPressed(bool newIsPressed) {
@@ -1532,9 +1684,9 @@ class _ButtonState extends ConsumerState<Button> {
               Text(
                 widget.text!,
                 style: widget.size.getTextStyle(ref).copyWith(
-                  color: color,
-                  fontWeight: ref.typo.semiBold,
-                ),
+                      color: color,
+                      fontWeight: ref.typo.semiBold,
+                    ),
               ),
           ],
         ),
@@ -1544,7 +1696,8 @@ class _ButtonState extends ConsumerState<Button> {
 }
 
 
-==== ./lib/theme/component/cart_button.dart ====
+
+===== ./lib/theme/component/cart_button.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/service/cart_service.dart';
@@ -1574,7 +1727,7 @@ class CartButton extends ConsumerWidget {
 
 
 
-==== ./lib/theme/component/hide_keyboard.dart ====
+===== ./lib/theme/component/hide_keyboard.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -1598,7 +1751,47 @@ class HideKeyboard extends ConsumerWidget {
 
 
 
-==== ./lib/theme/component/color_picker.dart ====
+===== ./lib/theme/component/circular_indicator.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:house_of_tomorrow/src/service/theme_service.dart';
+
+class CircularIndicator extends ConsumerWidget {
+  const CircularIndicator({
+    super.key,
+    required this.child,
+    required this.isBusy,
+  });
+
+  final Widget child;
+  final bool isBusy;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) => Stack(
+        children: [
+          child,
+          IgnorePointer(
+            ignoring: !isBusy,
+            child: AnimatedOpacity(
+              duration: const Duration(milliseconds: 222),
+              opacity: isBusy ? 1 : 0,
+              child: Container(
+                color: ref.color.background,
+                alignment: Alignment.center,
+                child: CircularProgressIndicator(
+                  color: ref.color.primary,
+                  value: isBusy ? null : 0,
+                ),
+              ),
+            ),
+          ),
+        ],
+      );
+}
+
+
+
+===== ./lib/theme/component/color_picker.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/service/theme_service.dart';
@@ -1656,7 +1849,7 @@ class ColorPicker extends ConsumerWidget {
 
 
 
-==== ./lib/theme/component/bottom_sheet/setting_bottom_sheet.dart ====
+===== ./lib/theme/component/bottom_sheet/setting_bottom_sheet.dart =====
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/service/language_serivce.dart';
@@ -1694,9 +1887,8 @@ class SettingBottomSheet extends ConsumerWidget {
 
 
 
-==== ./lib/theme/component/bottom_sheet/base_bottom_sheet.dart ====
+===== ./lib/theme/component/bottom_sheet/base_bottom_sheet.dart =====
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/service/theme_service.dart';
 
@@ -1713,33 +1905,30 @@ class BaseBottomSheet extends ConsumerWidget {
   final bool? isRoundAll;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    // TODO: implement build
-    return Container(
+  Widget build(BuildContext context, WidgetRef ref) => Container(
       decoration: BoxDecoration(
-        color: ref.color.surface,
-        borderRadius: isRoundAll ?? false
-          ? BorderRadius.circular(24)
-            : const BorderRadius.only(
-          topLeft: Radius.circular(24),
-          topRight: Radius.circular(24),
-        ),
-        boxShadow: ref.deco.shadow
-      ),
+          color: ref.color.surface,
+          borderRadius: isRoundAll ?? false
+              ? BorderRadius.circular(24)
+              : const BorderRadius.only(
+                  topLeft: Radius.circular(24),
+                  topRight: Radius.circular(24),
+                ),
+          boxShadow: ref.deco.shadow),
       padding: padding ??
-        const EdgeInsets.only(
-          top: 32,
-          bottom: 16,
-        ),
+          const EdgeInsets.only(
+            top: 32,
+            bottom: 16,
+          ),
       child: SafeArea(
         child: child,
       ),
     );
-  }
 }
 
 
-==== ./lib/theme/component/pop_button.dart ====
+
+===== ./lib/theme/component/pop_button.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/service/theme_service.dart';
@@ -1761,12 +1950,12 @@ class PopButton extends ConsumerWidget {
 
 
 
-==== ./lib/theme/dark_theme.dart ====
+===== ./lib/theme/dark_theme.dart =====
 import 'package:flutter/material.dart';
 
-import 'foundation/app_theme.dart';
-import 'res/palette.dart';
-import 'res/typo.dart';
+import 'package:house_of_tomorrow/theme/foundation/app_theme.dart';
+import 'package:house_of_tomorrow/theme/res/palette.dart';
+import 'package:house_of_tomorrow/theme/res/typo.dart';
 
 class DarkTheme implements AppTheme {
   @override
@@ -1812,7 +2001,57 @@ class DarkTheme implements AppTheme {
 }
 
 
-==== ./lib/src/model/product.dart ====
+
+===== ./lib/src/repository/product_repository.dart =====
+import 'dart:convert';
+import 'dart:developer';
+
+import 'package:dio/dio.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:house_of_tomorrow/src/model/product.dart';
+import 'package:house_of_tomorrow/util/helper/network_helper.dart';
+
+final productRepositoryProvider = Provider<ProductRepository>(
+  (ref) => ProductRepository(
+    dio: ref.read(dioProvider),
+  ),
+);
+
+class ProductRepository {
+  ProductRepository({
+    required this.dio,
+  });
+
+  final Dio dio;
+  final String searchProductListUrl =
+      'https://gist.githubusercontent.com/nero-angela/d16a5078c7959bf5abf6a9e0f8c2851a/raw/04fb4d21ddd1ba06f0349a890f5e5347d94d677e/ikeaSofaDataIBB.json';
+
+  Future<List<Product>> searchProductList(String keyword) async {
+    try {
+      final res = await dio.get(searchProductListUrl);
+
+      return jsonDecode(res.data)
+          .map<Product>((json) => Product.fromJson(json))
+          .where((product) {
+        /// 키워드가 비어있는 경우 모두 반환
+        if (keyword.isEmpty) return true;
+
+        /// name이나 brand에 키워드 포함 여부 확인
+        // ignore: prefer_single_quotes
+        return "${product.name}${product.brand}"
+            .toLowerCase()
+            .contains(keyword.toLowerCase());
+      }).toList();
+    } catch (e, s) {
+      log('Failed to searchProductList', error: e, stackTrace: s);
+      return [];
+    }
+  }
+}
+
+
+
+===== ./lib/src/model/product.dart =====
 import 'package:house_of_tomorrow/src/model/lang.dart';
 import 'package:house_of_tomorrow/src/model/product_color.dart';
 
@@ -1835,23 +2074,20 @@ class Product {
     required this.productColorList,
   });
 
-  factory Product.fromJson(Map<String, dynamic> json) {
-    return Product(
+  factory Product.fromJson(Map<String, dynamic> json) => Product(
       name: Lang.fromJson(json['name'] ?? {}),
       brand: Lang.fromJson(json['brand'] ?? {}),
       desc: Lang.fromJson(json['desc'] ?? {}),
       rating: json['rating'] ?? '0.0',
       priceUnit: json['priceUnit'] ?? '₩',
       price: json['price'] ?? 0,
-      productColorList: (json['colorList'] ?? []).map<ProductColor>((c) {
-        return ProductColor.fromJson(c);
-      }).toList(),
+      productColorList: (json['colorList'] ?? []).map<ProductColor>((c) => ProductColor.fromJson(c)).toList(),
     );
-  }
 }
 
 
-==== ./lib/src/model/product_color.dart ====
+
+===== ./lib/src/model/product_color.dart =====
 import 'package:flutter/material.dart';
 
 class ProductColor {
@@ -1863,17 +2099,15 @@ class ProductColor {
     required this.color,
   });
 
-  factory ProductColor.fromJson(Map<String, dynamic> json) {
-    return ProductColor(
+  factory ProductColor.fromJson(Map<String, dynamic> json) => ProductColor(
       color: Color(int.tryParse(json['hexColor']) ?? 0xFF000000),
       imageUrl: json['imageUrl'] ?? '',
     );
-  }
 }
 
 
 
-==== ./lib/src/model/lang.dart ====
+===== ./lib/src/model/lang.dart =====
 import 'package:house_of_tomorrow/util/helper/intl_helper.dart';
 
 class Lang {
@@ -1885,12 +2119,10 @@ class Lang {
     required this.en,
   });
 
-  factory Lang.fromJson(Map<String, dynamic> json) {
-    return Lang(
+  factory Lang.fromJson(Map<String, dynamic> json) => Lang(
       ko: json['ko'] as String,
       en: json['en'] as String,
     );
-  }
 
   @override
   String toString() => IntlHelper.isKo ? ko : en;
@@ -1898,7 +2130,7 @@ class Lang {
 
 
 
-==== ./lib/src/model/cart_item.dart ====
+===== ./lib/src/model/cart_item.dart =====
 import 'package:house_of_tomorrow/src/model/product.dart';
 
 class CartItem {
@@ -1922,19 +2154,52 @@ class CartItem {
     int? colorIndex,
     int? count,
     bool? isSelected,
-  }) {
-    return CartItem(
+  }) => CartItem(
       product: product ?? this.product,
       colorIndex: colorIndex ?? this.colorIndex,
       count: count ?? this.count,
       isSelected: isSelected ?? this.isSelected,
     );
-  }
 }
 
 
 
-==== ./lib/src/view/shopping/widget/product_empty.dart ====
+===== ./lib/src/view/base_view_model.dart =====
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:house_of_tomorrow/src/view/base_view_state.dart';
+
+abstract class BaseViewModel<S extends BaseViewState>
+    extends AutoDisposeNotifier<S> {}
+
+
+
+===== ./lib/src/view/shopping/shopping_view_state.dart =====
+import 'package:house_of_tomorrow/src/model/product.dart';
+import 'package:house_of_tomorrow/src/view/base_view_state.dart';
+
+class ShoppingViewState extends BaseViewState {
+  const ShoppingViewState({
+    required this.isBusy,
+    required this.productList,
+  });
+
+  @override
+  final bool isBusy;
+  final List<Product> productList;
+
+  ShoppingViewState copyWith({
+    bool? isBusy,
+    List<Product>? productList,
+  }) =>
+      ShoppingViewState(
+        isBusy: isBusy ?? this.isBusy,
+        productList: productList ?? this.productList,
+      );
+}
+
+
+
+===== ./lib/src/view/shopping/widget/product_empty.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/service/theme_service.dart';
@@ -1944,8 +2209,7 @@ class ProductEmpty extends ConsumerWidget {
   const ProductEmpty({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Center(
+  Widget build(BuildContext context, WidgetRef ref) => Center(
       child: Text(
         S.current.noProduct,
         style: ref.typo.headline4.copyWith(
@@ -1954,16 +2218,16 @@ class ProductEmpty extends ConsumerWidget {
         ),
       ),
     );
-  }
 }
 
 
 
-==== ./lib/src/view/shopping/widget/product_card_grid.dart ====
+===== ./lib/src/view/shopping/widget/product_card_grid.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:house_of_tomorrow/src/view/shopping/widget/product_card.dart';
+import 'package:house_of_tomorrow/theme/res/layout.dart';
 
 class ProductCardGrid extends ConsumerWidget {
   const ProductCardGrid(
@@ -1974,9 +2238,8 @@ class ProductCardGrid extends ConsumerWidget {
   final List productList;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return MasonryGridView.count(
-        crossAxisCount: 2,
+  Widget build(BuildContext context, WidgetRef ref) => MasonryGridView.count(
+        crossAxisCount: context.layout(2, tablet: 3, desktop: 4),
         mainAxisSpacing: 24,
         crossAxisSpacing: 16,
         padding: const EdgeInsets.symmetric(
@@ -1988,12 +2251,11 @@ class ProductCardGrid extends ConsumerWidget {
           final product = productList[index];
           return ProductCard(product: product);
         });
-  }
 }
 
 
 
-==== ./lib/src/view/shopping/widget/product_card.dart ====
+===== ./lib/src/view/shopping/widget/product_card.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/model/product.dart';
@@ -2011,79 +2273,114 @@ class ProductCard extends ConsumerWidget {
   final Product product;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    // GestureDetector는 터치 이벤트(탭, 더블탭, 길게 누름 등)를 감지하여 해당 제스처에 대한 동작(콜백)을 처리할 수 있는 Flutter 위젯
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => ProductView(product: product),
+  Widget build(BuildContext context, WidgetRef ref) => GestureDetector(
+        // GestureDetector는 터치 이벤트(탭, 더블탭, 길게 누름 등)를 감지하여 해당 제스처에 대한 동작(콜백)을 처리할 수 있는 Flutter 위젯
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ProductView(product: product),
+            ),
+          );
+        },
+        child: Container(
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            color: ref.color.surface,
+            boxShadow: ref.deco.shadow,
+            borderRadius: BorderRadius.circular(12),
           ),
-        );
-      },
-      child: Container(
-        padding: const EdgeInsets.all(12),
-        decoration: BoxDecoration(
-          color: ref.color.surface,
-          boxShadow: ref.deco.shadow,
-          borderRadius: BorderRadius.circular(12),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            if (product.productColorList.isNotEmpty)
-              ClipRRect(
-                borderRadius: BorderRadius.circular(16),
-                child: Image.network(
-                  product.productColorList.first.imageUrl,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
-                ),
-              ),
-
-            /// Name
-            Text(
-              product.name.toString(),
-              style: ref.typo.headline4.copyWith(
-                fontWeight: ref.typo.semiBold,
-              ),
-            ),
-            const SizedBox(height: 4),
-
-            const SizedBox(height: 4),
-            Text(
-              product.brand.toString(),
-              style: ref.typo.body2.copyWith(
-                color: ref.color.subtext,
-                fontWeight: ref.typo.light,
-              ),
-            ),
-            const SizedBox(height: 4),
-            Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    IntlHelper.currency(
-                      number: product.price,
-                      symbol: product.priceUnit,
-                    ),
-                    style: ref.typo.subtitle2,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              if (product.productColorList.isNotEmpty)
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: Image.network(
+                    product.productColorList.first.imageUrl,
+                    width: double.infinity,
+                    fit: BoxFit.cover,
                   ),
                 ),
-                Rating(rating: product.rating),
-              ],
-            )
-          ],
+
+              /// Name
+              Text(
+                product.name.toString(),
+                style: ref.typo.headline4.copyWith(
+                  fontWeight: ref.typo.semiBold,
+                ),
+              ),
+              const SizedBox(height: 4),
+
+              const SizedBox(height: 4),
+              Text(
+                product.brand.toString(),
+                style: ref.typo.body2.copyWith(
+                  color: ref.color.subtext,
+                  fontWeight: ref.typo.light,
+                ),
+              ),
+              const SizedBox(height: 4),
+              Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      IntlHelper.currency(
+                        number: product.price,
+                        symbol: product.priceUnit,
+                      ),
+                      style: ref.typo.subtitle2,
+                    ),
+                  ),
+                  Rating(rating: product.rating),
+                ],
+              )
+            ],
+          ),
         ),
-      ),
-    );
+      );
+}
+
+
+
+===== ./lib/src/view/shopping/shopping_view_model.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:house_of_tomorrow/src/repository/product_repository.dart';
+import 'package:house_of_tomorrow/src/view/base_view_model.dart';
+import 'package:house_of_tomorrow/src/view/shopping/shopping_view_state.dart';
+
+final shoppingViewModelProvider =
+    NotifierProvider.autoDispose<ShoppingViewModel, ShoppingViewState>(
+        ShoppingViewModel.new);
+
+class ShoppingViewModel extends BaseViewModel<ShoppingViewState> {
+  @override
+  ShoppingViewState build() => const ShoppingViewState(
+        isBusy: false,
+        productList: [],
+      );
+
+  // 텍스트 필드의 입력 값을 관리하는 컨트롤러
+  final TextEditingController textController = TextEditingController();
+
+  String get keyword => textController.text.trim();
+
+  Future<void> searchProductList() async {
+    state = state.copyWith(isBusy: true);
+    final results = await Future.wait([
+      ref.read(productRepositoryProvider).searchProductList(keyword),
+      Future.delayed(const Duration(milliseconds: 555)),
+    ]);
+    state = state.copyWith(isBusy: false, productList: results[0]);
   }
 }
 
 
 
-==== ./lib/src/view/shopping/shopping_view.dart ====
+===== ./lib/src/view/shopping/shopping_view.dart =====
+// ignore_for_file: prefer_single_quotes
+
 import 'dart:convert';
 import 'dart:developer'; // ✅ log 사용 추가
 
@@ -2123,9 +2420,7 @@ class _ShoppingViewState extends ConsumerState<ShoppingView> {
       );
 
       setState(() {
-        productList = jsonDecode(res.data).map<Product>((json) {
-          return Product.fromJson(json);
-        }).where((products) {
+        productList = jsonDecode(res.data).map<Product>((json) => Product.fromJson(json)).where((products) {
           if (keyword.isEmpty) return true;
 
           return "${products.name}${products.brand}}"
@@ -2147,8 +2442,7 @@ class _ShoppingViewState extends ConsumerState<ShoppingView> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return HideKeyboard(
+  Widget build(BuildContext context) => HideKeyboard(
       child: Scaffold(
         appBar: AppBar(
           title: Text(S.current.shopping),
@@ -2160,9 +2454,7 @@ class _ShoppingViewState extends ConsumerState<ShoppingView> {
               onPressed: () {
                 showModalBottomSheet(
                   context: context,
-                  builder: (context) {
-                    return const SettingBottomSheet();
-                  },
+                  builder: (context) => const SettingBottomSheet(),
                 );
               },
             ),
@@ -2206,26 +2498,36 @@ class _ShoppingViewState extends ConsumerState<ShoppingView> {
         ),
       ),
     );
-  }
 }
 
 
 
-==== ./lib/src/view/product/product_view.dart ====
+===== ./lib/src/view/base_view_state.dart =====
+abstract class BaseViewState {
+  const BaseViewState();
+
+  bool get isBusy;
+}
+
+
+===== ./lib/src/view/product/product_view.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/model/cart_item.dart';
 import 'package:house_of_tomorrow/src/model/product.dart';
 import 'package:house_of_tomorrow/src/service/cart_service.dart';
+import 'package:house_of_tomorrow/src/view/base_view.dart';
+import 'package:house_of_tomorrow/src/view/product/product_view_model.dart';
 import 'package:house_of_tomorrow/src/view/product/widget/product_bottom_sheet.dart';
 import 'package:house_of_tomorrow/src/view/product/widget/product_color_preview.dart';
 import 'package:house_of_tomorrow/src/view/product/widget/product_desc.dart';
+import 'package:house_of_tomorrow/src/view/product/widget/product_layout.dart';
 import 'package:house_of_tomorrow/theme/component/cart_button.dart';
 import 'package:house_of_tomorrow/theme/component/color_picker.dart';
 import 'package:house_of_tomorrow/theme/component/pop_button.dart';
 import 'package:house_of_tomorrow/util/lang/generated/l10n.dart';
 
-class ProductView extends ConsumerStatefulWidget {
+class ProductView extends StatelessWidget {
   const ProductView({
     super.key,
     required this.product,
@@ -2234,99 +2536,58 @@ class ProductView extends ConsumerStatefulWidget {
   final Product product;
 
   @override
-  ConsumerState<ProductView> createState() => _ProductViewState();
-}
+  Widget build(BuildContext context) => BaseView(
+      viewModelProvider: productViewModelProvider,
+      builder: (ref, viewModel, state) => Scaffold(
+            appBar: AppBar(
+              title: Text(S.current.product),
+              leading: const PopButton(),
+              titleSpacing: 0,
+              actions: const [
+                CartButton(),
+              ],
+            ),
+            body: ProductLayout(
+              productInfo: SingleChildScrollView(
+                padding: const EdgeInsets.symmetric(vertical: 32),
+                child: Wrap(
+                  runSpacing: 32,
+                  alignment: WrapAlignment.center,
+                  children: [
+                    /// ProductColorPreview
+                    ProductColorPreview(
+                      colorIndex: state.colorIndex,
+                      product: product,
+                    ),
 
-class _ProductViewState extends ConsumerState<ProductView> {
-  /// 선택한 수량
-  int count = 1;
+                    /// ColorPicker
+                    ColorPicker(
+                      colorIndex: state.colorIndex,
+                      colorList: product.productColorList
+                          .map((e) => e.color)
+                          .toList(),
+                      onColorSelected: viewModel.onColorIndexChanged,
+                    ),
 
-  /// 선택한 색상
-  int colorIndex = 0;
+                    ProductDesc(product: product)
+                  ],
+                ),
+              ),
 
-  /// 수량 업데이트 이벤트 함수
-  void onCountChanged(int newCount) {
-    setState(() {
-      count = newCount;
-    });
-  }
-
-  /// 색상 업데이트 이벤트 함수
-  void onColorIndexChanged(int newColorIndex) {
-    setState(() {
-      colorIndex = newColorIndex;
-    });
-  }
-
-  // 카트에 상품 추가
-  void onAddToCartPressed() {
-    final CartItem newCartItem = CartItem(
-      colorIndex: colorIndex,
-      count: count,
-      isSelected: true,
-      product: widget.product,
-    );
-    ref.read(cartServiceProvider.notifier).add(newCartItem);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(S.current.product),
-        leading: const PopButton(),
-        titleSpacing: 0,
-        actions: [
-          const CartButton(),
-        ],
-      ),
-      body: Column(
-        children: [
-          Expanded(
-            // 스크린 공간을 초과하는 경우 내부 내용을 스크롤할 수 있도록 하는 위젯입니다.
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(vertical: 32),
-              child: Wrap(
-                runSpacing: 32,
-                alignment: WrapAlignment.center,
-                children: [
-                  /// ProductColorPreview
-                  ProductColorPreview(
-                    colorIndex: colorIndex,
-                    product: widget.product,
-                  ),
-
-                  /// ColorPicker
-                  ColorPicker(
-                    colorIndex: colorIndex,
-                    colorList: widget.product.productColorList.map((e) {
-                      return e.color;
-                    }).toList(),
-                    onColorSelected: onColorIndexChanged,
-                  ),
-
-                  ProductDesc(product: widget.product)
-                ],
+              /// ProductBottomSheet
+              productBottomSheet: ProductBottomSheet(
+                count: state.count,
+                product: product,
+                onCountChanged: viewModel.onCountChanged,
+                onAddToCartPressed: () => viewModel.onAddToCartPressed(product),
               ),
             ),
-          ),
-
-          /// ProductBottomSheet
-          ProductBottomSheet(
-            count: count,
-            product: widget.product,
-            onCountChanged: onCountChanged,
-            onAddToCartPressed: onAddToCartPressed,
-          ),
-        ],
-      ),
-    );
-  }
+          ));
 }
 
 
 
-==== ./lib/src/view/product/widget/product_bottom_sheet.dart ====
+===== ./lib/src/view/product/widget/product_bottom_sheet.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/model/product.dart';
@@ -2334,6 +2595,7 @@ import 'package:house_of_tomorrow/src/service/theme_service.dart';
 import 'package:house_of_tomorrow/theme/component/bottom_sheet/base_bottom_sheet.dart';
 import 'package:house_of_tomorrow/theme/component/button/button.dart';
 import 'package:house_of_tomorrow/theme/component/counter_button.dart';
+import 'package:house_of_tomorrow/theme/res/layout.dart';
 import 'package:house_of_tomorrow/util/helper/intl_helper.dart';
 import 'package:house_of_tomorrow/util/lang/generated/l10n.dart';
 
@@ -2353,60 +2615,59 @@ class ProductBottomSheet extends ConsumerWidget {
   final void Function() onAddToCartPressed;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return BaseBottomSheet(
-      padding: EdgeInsets.only(
-        top: 32,
-        bottom: 16,
-        left: 16,
-        right: 16,
-      ),
-      child: Wrap(
-        runSpacing: 16,
-        children: [
-          Row(
-            children: [
-              Text(
-                S.current.quantity,
-                style: ref.typo.headline3,
-              ),
-              const Spacer(),
-              CounterButton(count: count, onChanged: onCountChanged),
-            ],
-          ),
-          Row(
-            children: [
-              Text(
-                S.current.totalPrice,
-                style: ref.typo.headline3,
-              ),
-
-              Spacer(), // 남은 공간을 차지하여 다음 위젯을 오른쪽에 배치합니다.
-
-              Text(
-                IntlHelper.currency(
-                    symbol: product.priceUnit, number: product.price * count),
-                style: ref.typo.headline3.copyWith(
-                  color: ref.color.primary,
+  Widget build(BuildContext context, WidgetRef ref) => BaseBottomSheet(
+        isRoundAll: context.layout(false, desktop: true),
+        padding: EdgeInsets.only(
+          top: context.layout(32, desktop: 16),
+          bottom: 16,
+          left: 16,
+          right: 16,
+        ),
+        child: Wrap(
+          runSpacing: 16,
+          children: [
+            Row(
+              children: [
+                Text(
+                  S.current.quantity,
+                  style: ref.typo.headline3,
                 ),
-              )
-            ],
-          ),
-          Button(
-            width: double.infinity,
-            size: ButtonSize.large,
-            text: S.current.addToCart,
-            onPressed: onAddToCartPressed,
-          ),
-        ],
-      ),
-    );
-  }
+                const Spacer(),
+                CounterButton(count: count, onChanged: onCountChanged),
+              ],
+            ),
+            Row(
+              children: [
+                Text(
+                  S.current.totalPrice,
+                  style: ref.typo.headline3,
+                ),
+
+                const Spacer(), // 남은 공간을 차지하여 다음 위젯을 오른쪽에 배치합니다.
+
+                Text(
+                  IntlHelper.currency(
+                      symbol: product.priceUnit, number: product.price * count),
+                  style: ref.typo.headline3.copyWith(
+                    color: ref.color.primary,
+                  ),
+                )
+              ],
+            ),
+            Button(
+              width: double.infinity,
+              size: ButtonSize.large,
+              text: S.current.addToCart,
+              onPressed: onAddToCartPressed,
+            ),
+          ],
+        ),
+      );
 }
 
 
 
-==== ./lib/src/view/product/widget/product_desc.dart ====
+===== ./lib/src/view/product/widget/product_desc.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/model/product.dart';
@@ -2423,8 +2684,7 @@ class ProductDesc extends ConsumerWidget {
   final Product product;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Padding(
+  Widget build(BuildContext context, WidgetRef ref) => Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Column(
         children: [
@@ -2451,12 +2711,11 @@ class ProductDesc extends ConsumerWidget {
         ],
       ),
     );
-  }
 }
 
 
 
-==== ./lib/src/view/product/widget/product_color_preview.dart ====
+===== ./lib/src/view/product/widget/product_color_preview.dart =====
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -2475,8 +2734,7 @@ class ProductColorPreview extends ConsumerWidget {
   final Product product;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Container(
+  Widget build(BuildContext context, WidgetRef ref) => Container(
       decoration: BoxDecoration(
         color: ref.color.surface,
         borderRadius: BorderRadius.circular(24),
@@ -2524,24 +2782,266 @@ class ProductColorPreview extends ConsumerWidget {
         )
       ]),
     );
+}
+
+
+
+===== ./lib/src/view/product/widget/product_layout.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:house_of_tomorrow/theme/res/layout.dart';
+
+class ProductLayout extends ConsumerWidget {
+  const ProductLayout({
+    super.key,
+    required this.productInfo,
+    required this.productBottomSheet,
+  });
+
+  final Widget productInfo;
+  final Widget productBottomSheet;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) => context.layout(
+      Column(
+        children: [
+          Expanded(child: productInfo),
+          productBottomSheet,
+        ],
+      ),
+      desktop: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              flex: 2,
+              child: productInfo,
+            ),
+            const SizedBox(
+              width: 16,
+            ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 32),
+                child: productBottomSheet,
+              ),
+            ),
+          ],
+        ),
+      ));
+}
+
+
+
+===== ./lib/src/view/product/product_view_state.dart =====
+import 'package:house_of_tomorrow/src/view/base_view_state.dart';
+
+class ProductViewState extends BaseViewState {
+  const ProductViewState({
+    required this.isBusy,
+    required this.count,
+    required this.colorIndex,
+  });
+
+  @override
+  final bool isBusy;
+
+  final int count;
+
+  final int colorIndex;
+
+  ProductViewState copyWith({
+    bool? isBusy,
+    int? count,
+    int? colorIndex,
+  }) => ProductViewState(
+      colorIndex: colorIndex ?? this.colorIndex,
+      count: count ?? this.count,
+      isBusy: isBusy ?? this.isBusy, 
+      );
+}
+
+
+
+===== ./lib/src/view/product/product_view_model.dart =====
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:house_of_tomorrow/src/model/cart_item.dart';
+import 'package:house_of_tomorrow/src/model/product.dart';
+import 'package:house_of_tomorrow/src/service/cart_service.dart';
+import 'package:house_of_tomorrow/src/view/base_view_model.dart';
+import 'package:house_of_tomorrow/src/view/product/product_view_state.dart';
+import 'package:house_of_tomorrow/theme/component/toast/toast.dart';
+import 'package:house_of_tomorrow/util/lang/generated/l10n.dart';
+
+final productViewModelProvider =
+    NotifierProvider.autoDispose<ProductViewModel, ProductViewState>(
+        ProductViewModel.new);
+
+class ProductViewModel extends BaseViewModel<ProductViewState> {
+  @override
+  ProductViewState build() => const ProductViewState(
+      colorIndex: 0,
+      isBusy: false,
+      count: 1,
+    );
+
+      /// 수량 업데이트 이벤트 함수
+  void onCountChanged(int newCount) {
+    state = state.copyWith(
+      count: newCount,
+    );
+  }
+
+  /// 색상 업데이트 이벤트 함수
+  void onColorIndexChanged(int newColorIndex) {
+    state = state.copyWith(
+      colorIndex: newColorIndex,
+    );
+  }
+
+  /// 카트에 상품 추가
+  void onAddToCartPressed(Product product) {
+    final CartItem newCartItem = CartItem(
+      colorIndex: state.colorIndex,
+      count: state.count,
+      isSelected: true,
+      product: product,
+    );
+    ref.read(cartServiceProvider.notifier).add(newCartItem);
+    Toast.show(S.current.productAdded(product.name));
   }
 }
 
 
 
-==== ./lib/src/view/product/product_view_state.dart ====
+===== ./lib/src/view/base_view.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:house_of_tomorrow/src/view/base_view_model.dart';
+import 'package:house_of_tomorrow/src/view/base_view_state.dart';
+import 'package:house_of_tomorrow/theme/component/circular_indicator.dart';
+
+class BaseView<VM extends BaseViewModel<S>, S extends BaseViewState>
+    extends ConsumerWidget {
+  const BaseView({
+    super.key,
+    required this.viewModelProvider,
+    required this.builder,
+  });
+
+  final AutoDisposeNotifierProvider<VM, S> viewModelProvider;
+  final Widget Function(WidgetRef ref, VM viewModel, S state) builder;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final state = ref.watch(viewModelProvider);
+    return CircularIndicator(
+        isBusy: state.isBusy,
+        child: builder(
+          ref, 
+          ref.read(viewModelProvider.notifier), 
+          state),
+          );
+  }
+}
 
 
 
-==== ./lib/src/view/product/product_view_model.dart ====
+===== ./lib/src/view/cart/cart_view_state.dart =====
+import 'package:house_of_tomorrow/src/model/cart_item.dart';
+import 'package:house_of_tomorrow/src/view/base_view_state.dart';
+
+class CartViewState extends BaseViewState {
+  const CartViewState({
+    required this.isBusy,
+    required this.cartItemList,
+  });
+
+  @override
+  final bool isBusy;
+  final List<CartItem> cartItemList;
+
+  CartViewState copyWith({
+    bool? isBusy,
+    List<CartItem>? cartItemList,
+  }) => CartViewState(
+      isBusy: isBusy ?? this.isBusy,
+      cartItemList: cartItemList ?? this.cartItemList,
+    );
+}
 
 
+===== ./lib/src/view/cart/cart_view_model.dart =====
 
-==== ./lib/src/view/cart/cart_view_model.dart ====
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:house_of_tomorrow/src/model/cart_item.dart';
+import 'package:house_of_tomorrow/src/service/cart_service.dart';
+import 'package:house_of_tomorrow/src/view/base_view_model.dart';
+import 'package:house_of_tomorrow/src/view/cart/cart_view_state.dart';
+import 'package:house_of_tomorrow/theme/component/toast/toast.dart';
+import 'package:house_of_tomorrow/util/helper/intl_helper.dart';
+import 'package:house_of_tomorrow/util/lang/generated/l10n.dart';
+
+final cartViewModelProvider =
+    NotifierProvider.autoDispose<CartViewModel, CartViewState>(
+        CartViewModel.new);
+
+class CartViewModel extends BaseViewModel<CartViewState> {
+  @override
+  CartViewState build() => CartViewState(isBusy: false,
+    cartItemList: ref.watch(cartServiceProvider),
+    );
+
+  CartService get cartService => ref.read(cartServiceProvider.notifier);
+
+  /// 선택한 CartItem 목록
+  List<CartItem> get selectedCartItemList => cartService.selectedCartItemList;
+
+  /// 최종 가격
+  String get totalPrice => selectedCartItemList.isEmpty
+        ? '0'
+        : IntlHelper.currency(
+            symbol: cartService.selectedCartItemList.first.product.priceUnit,
+            number: cartService.selectedCartItemList.fold(0, (prev, curr) => prev + curr.count * curr.product.price),
+          );
+
+  /// 선택한 CartItem 삭제
+  void onDeletePressed() {
+    cartService.delete(cartService.selectedCartItemList);
+    Toast.show(S.current.deleteDialogSuccessToast);
+  }
+
+  /// CartItem 클릭
+  void onCartItemPressed(int index) {
+    final cartItem = state.cartItemList[index];
+    cartService.update(
+      index,
+      cartItem.copyWith(
+        isSelected: !cartItem.isSelected,
+      ),
+    );
+  }
+
+  /// CartItem 개수 변경
+  void onCountChanged(int index, int count) {
+    cartService.update(
+      index,
+      state.cartItemList[index].copyWith(
+        count: count,
+      ),
+    );
+  }
+
+  /// 선택한 CartItem 결제
+  void onCheckoutPressed() {
+    cartService.delete(cartService.selectedCartItemList);
+    Toast.show(S.current.checkoutDialogSuccessToast);
+  }
+}
 
 
-
-==== ./lib/src/view/cart/widget/cart_item_tile.dart ====
+===== ./lib/src/view/cart/widget/cart_item_tile.dart =====
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -2640,7 +3140,7 @@ class CartItemTile extends ConsumerWidget {
 
 
 
-==== ./lib/src/view/cart/widget/cart_empty.dart ====
+===== ./lib/src/view/cart/widget/cart_empty.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/service/theme_service.dart';
@@ -2650,8 +3150,7 @@ class CartEmpty extends ConsumerWidget {
   const CartEmpty({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Center(
+  Widget build(BuildContext context, WidgetRef ref) => Center(
       child: Text(
         S.current.cartIsEmpty,
         style: ref.typo.headline4.copyWith(
@@ -2660,18 +3159,18 @@ class CartEmpty extends ConsumerWidget {
         ),
       ),
     );
-  }
 }
 
 
 
-==== ./lib/src/view/cart/widget/cart_bottom_sheet.dart ====
+===== ./lib/src/view/cart/widget/cart_bottom_sheet.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/model/cart_item.dart';
 import 'package:house_of_tomorrow/src/service/theme_service.dart';
 import 'package:house_of_tomorrow/theme/component/bottom_sheet/base_bottom_sheet.dart';
 import 'package:house_of_tomorrow/theme/component/button/button.dart';
+import 'package:house_of_tomorrow/theme/res/layout.dart';
 import 'package:house_of_tomorrow/util/lang/generated/l10n.dart';
 
 class CartBottomSheet extends ConsumerWidget {
@@ -2687,146 +3186,323 @@ class CartBottomSheet extends ConsumerWidget {
   final void Function() onCheckoutPressed;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return BaseBottomSheet(
-      padding: EdgeInsets.only(
-        top: 32,
-        bottom: 16,
-        left: 16,
-        right: 16,
-      ),
-      child: Wrap(
-        runSpacing: 16,
-        children: [
-          Row(
-            children: [
-              Text(
-                S.current.selectedItems,
-                style: ref.typo.headline3,
-              ),
-              const Spacer(),
-              Text(
-                S.current.items(selectedCartItemList.length),
-                style: ref.typo.headline3.copyWith(color: ref.color.primary),
-              ),
-            ],
-          ),
-
-          /// Total Price
-          Row(
-            children: [
-              Text(
-                S.current.totalPrice,
-                style: ref.typo.headline3,
-              ),
-              const Spacer(),
-              Text(
-                totalPrice,
-                style: ref.typo.headline3.copyWith(
-                  color: ref.color.primary,
+  Widget build(BuildContext context, WidgetRef ref) => BaseBottomSheet(
+        isRoundAll: context.layout(
+          false,
+          desktop: true,
+        ),
+        padding: EdgeInsets.only(
+          top: context.layout(32, desktop: 16),
+          bottom: 16,
+          left: 16,
+          right: 16,
+        ),
+        child: Wrap(
+          runSpacing: 16,
+          children: [
+            Row(
+              children: [
+                Text(
+                  S.current.selectedItems,
+                  style: ref.typo.headline3,
                 ),
-              ),
-            ],
+                const Spacer(),
+                Text(
+                  S.current.items(selectedCartItemList.length),
+                  style: ref.typo.headline3.copyWith(color: ref.color.primary),
+                ),
+              ],
+            ),
+
+            /// Total Price
+            Row(
+              children: [
+                Text(
+                  S.current.totalPrice,
+                  style: ref.typo.headline3,
+                ),
+                const Spacer(),
+                Text(
+                  totalPrice,
+                  style: ref.typo.headline3.copyWith(
+                    color: ref.color.primary,
+                  ),
+                ),
+              ],
+            ),
+
+            /// Checkout
+            Button(
+              text: S.current.checkout,
+              width: double.infinity,
+              size: ButtonSize.large,
+              isInactive: selectedCartItemList.isEmpty,
+              onPressed: onCheckoutPressed,
+            ),
+          ],
+        ),
+      );
+}
+
+
+
+===== ./lib/src/view/cart/widget/cart_delete_dialog.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:house_of_tomorrow/src/service/theme_service.dart';
+import 'package:house_of_tomorrow/theme/component/base_dialog.dart';
+import 'package:house_of_tomorrow/theme/component/button/button.dart';
+import 'package:house_of_tomorrow/util/lang/generated/l10n.dart';
+
+class CartDeleteDialog extends ConsumerWidget {
+  const CartDeleteDialog({
+    super.key,
+    required this.onDeletePressed,
+  });
+
+  final void Function() onDeletePressed;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) => BaseDialog(
+        title: S.current.delete,
+        content: Text(
+          S.current.deleteDialogDesc,
+          style: ref.typo.headline6,
+        ),
+        actions: [
+          Button(
+            text: S.current.delete,
+            width: double.infinity,
+            color: ref.color.onSecondary,
+            backgroundColor: ref.color.secondary,
+            onPressed: () {
+              Navigator.pop(context);
+              onDeletePressed();
+            },
+          ),
+          const SizedBox(
+            height: 12,
           ),
 
-          /// Checkout
+          /// Cancel
+          Button(
+            text: S.current.cancel,
+            width: double.infinity,
+            color: ref.color.text,
+            borderColor: ref.color.hint,
+            type: ButtonType.outline,
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+        ],
+      );
+}
+
+
+
+===== ./lib/src/view/cart/widget/cart_layout.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:house_of_tomorrow/src/service/theme_service.dart';
+import 'package:house_of_tomorrow/theme/res/layout.dart';
+
+class CartLayout extends ConsumerWidget {
+  const CartLayout({
+    super.key,
+    required this.cartItemList,
+    required this.cartBottomSheet,
+  });
+
+  final Widget cartItemList;
+  final Widget cartBottomSheet;
+  
+  @override
+  Widget build(BuildContext context, WidgetRef ref) => context.layout(
+    Column(
+      children: [
+        Expanded(child: cartItemList),
+        cartBottomSheet,
+      ],
+    ),
+     /// Desktop
+      desktop: Padding(
+        padding: const EdgeInsets.symmetric(
+          vertical: 32,
+          horizontal: 16,
+        ),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              flex: 2,
+              child: Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: ref.color.surface,
+                  boxShadow: ref.deco.shadow,
+                  borderRadius: BorderRadius.circular(24),
+                ),
+                child: cartItemList,
+              ),
+            ),
+            const SizedBox(width: 16),
+            Expanded(
+              flex: 1,
+              child: cartBottomSheet,
+            ),
+          ],
+        ),
+      ),
+  );
+}
+
+
+
+===== ./lib/src/view/cart/widget/cart_checkout_dialog.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:house_of_tomorrow/src/service/theme_service.dart';
+import 'package:house_of_tomorrow/theme/component/base_dialog.dart';
+import 'package:house_of_tomorrow/theme/component/button/button.dart';
+import 'package:house_of_tomorrow/util/lang/generated/l10n.dart';
+
+class CartCheckoutDialog extends ConsumerWidget {
+  const CartCheckoutDialog({
+    super.key,
+    required this.onCheckoutPressed,
+  });
+
+  final void Function() onCheckoutPressed;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) => BaseDialog(
+        title: S.current.checkout,
+        content: Text(
+          S.current.checkoutDialogDesc,
+          style: ref.typo.headline6,
+        ),
+        actions: [
           Button(
             text: S.current.checkout,
             width: double.infinity,
-            size: ButtonSize.large,
-            isInactive: selectedCartItemList.isEmpty,
-            onPressed: onCheckoutPressed,
+            color: ref.color.onSecondary,
+            backgroundColor: ref.color.secondary,
+            onPressed: () {
+              Navigator.pop(context);
+              onCheckoutPressed();
+            },
+          ),
+          const SizedBox(
+            height: 12,
+          ),
+          Button(
+            text: S.current.cancel,
+            width: double.infinity,
+            color: ref.color.text,
+            borderColor: ref.color.hint,
+            type: ButtonType.outline,
+            onPressed: () {
+              Navigator.pop(context);
+            },
           ),
         ],
-      ),
-    );
-  }
+      );
 }
 
 
 
-==== ./lib/src/view/cart/cart_view.dart ====
+===== ./lib/src/view/cart/cart_view.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/service/cart_service.dart';
+import 'package:house_of_tomorrow/src/service/theme_service.dart';
+import 'package:house_of_tomorrow/src/view/base_view.dart';
+import 'package:house_of_tomorrow/src/view/cart/cart_view_model.dart';
 import 'package:house_of_tomorrow/src/view/cart/widget/cart_bottom_sheet.dart';
+import 'package:house_of_tomorrow/src/view/cart/widget/cart_checkout_dialog.dart';
+import 'package:house_of_tomorrow/src/view/cart/widget/cart_delete_dialog.dart';
 import 'package:house_of_tomorrow/src/view/cart/widget/cart_empty.dart';
 import 'package:house_of_tomorrow/src/view/cart/widget/cart_item_tile.dart';
+import 'package:house_of_tomorrow/src/view/cart/widget/cart_layout.dart';
+import 'package:house_of_tomorrow/theme/component/button/button.dart';
 import 'package:house_of_tomorrow/theme/component/pop_button.dart';
+import 'package:house_of_tomorrow/theme/component/toast/toast.dart';
 import 'package:house_of_tomorrow/util/helper/intl_helper.dart';
 import 'package:house_of_tomorrow/util/lang/generated/l10n.dart';
 
-class CartView extends ConsumerWidget {
+class CartView extends StatelessWidget {
   const CartView({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    // 현재 장바구니 아이템 목록 (불변 리스트)
-    final cartItemList = ref.watch(cartServiceProvider);
+  Widget build(BuildContext context) => BaseView(
+      viewModelProvider: cartViewModelProvider,
+      builder: (ref, viewModel, state) => Scaffold(
+        appBar: AppBar(
+          title: Text(S.current.cart),
+          leading: const PopButton(),
+          titleSpacing: 0,
+          actions: [
+            /// Delete Button
+            Button(
+              onPressed: () {
+                /// Show delete dialog
+                showDialog(
+                  context: context,
+                  builder: (context) => CartDeleteDialog(
+                      onDeletePressed: viewModel.onDeletePressed,
+                    ),
+                );
+              },
+              text: S.current.delete,
+              type: ButtonType.flat,
+              color: ref.color.secondary,
+              isInactive: viewModel.selectedCartItemList.isEmpty,
+            ),
+          ],
+        ),
+        body: CartLayout(
+          /// CartItemList
+          cartItemList: state.cartItemList.isEmpty
+              ? const CartEmpty()
+              : ListView.builder(
+                  itemCount: state.cartItemList.length,
+                  itemBuilder: (context, index) {
+                    final cartItem = state.cartItemList[index];
+                    return CartItemTile(
+                      cartItem: cartItem,
+                      onPressed: () {
+                        viewModel.onCartItemPressed(index);
+                      },
+                      onCountChanged: (count) {
+                        viewModel.onCountChanged(index, count);
+                      },
+                    );
+                  },
+                ),
 
-    // 상태 변경 메서드 사용 (update, delete 등)
-    final cartService = ref.read(cartServiceProvider.notifier);
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(S.current.cart),
-        leading: const PopButton(),
-        titleSpacing: 0,
-      ),
-      body: Column(
-        children: [
-          Expanded(
-            child: cartItemList.isEmpty
-                ? const CartEmpty()
-                : ListView.builder(
-                    itemCount: cartItemList.length,
-                    itemBuilder: (context, index) {
-                      final cartItem = cartItemList[index];
-                      return CartItemTile(
-                        cartItem: cartItem,
-                        onPressed: () {
-                          cartService.update(
-                            index,
-                            cartItem.copyWith(
-                              isSelected: !cartItem.isSelected,
-                            ),
-                          );
-                        },
-                        onCountChanged: (count) {
-                          cartService.update(
-                            index,
-                            cartItem.copyWith(count: count),
-                          );
-                        },
-                      );
-                    },
+          /// CartBottomSheet
+          cartBottomSheet: CartBottomSheet(
+            totalPrice: viewModel.totalPrice,
+            selectedCartItemList: viewModel.selectedCartItemList,
+            onCheckoutPressed: () {
+              /// Show checkout dialog
+              showDialog(
+                context: context,
+                builder: (context) => CartCheckoutDialog(
+                    onCheckoutPressed: viewModel.onCheckoutPressed,
                   ),
+              );
+            },
           ),
-
-          /// 하단에 나타나는 CartBottomSheet
-          CartBottomSheet(
-            totalPrice: cartService.selectedCartItemList.isEmpty
-                ? '0'
-                : IntlHelper.currency(
-                    symbol: cartService
-                        .selectedCartItemList.first.product.priceUnit,
-                    number:
-                        cartService.selectedCartItemList.fold(0, (prev, curr) {
-                      return prev + curr.count * curr.product.price;
-                    }),
-                  ),
-            selectedCartItemList: cartService.selectedCartItemList,
-            onCheckoutPressed: () {},
-          ),
-        ],
+        ),
       ),
     );
-  }
 }
 
 
 
-==== ./lib/src/service/cart_service.dart ====
+===== ./lib/src/service/cart_service.dart =====
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/model/cart_item.dart';
 import 'package:house_of_tomorrow/util/helper/immutable_helper.dart';
@@ -2839,9 +3515,7 @@ class CartService extends Notifier<List<CartItem>> {
   List<CartItem> build() => const [];
 
   /// 선택된 상품 목록
-  List<CartItem> get selectedCartItemList {
-    return state.where((cartItem) => cartItem.isSelected).toImmutable();
-  }
+  List<CartItem> get selectedCartItemList => state.where((cartItem) => cartItem.isSelected).toImmutable();
 
   /// 상품 추가
   void add(CartItem newCartItem) {
@@ -2850,30 +3524,25 @@ class CartService extends Notifier<List<CartItem>> {
 
   // 상품 수정
   void update(int selectedIndex, CartItem newCartItem) {
-    state = state.asMap().entries.map((entry) {
-      return entry.key == selectedIndex ? newCartItem : entry.value;
-    }).toImmutable();
+    state = state.asMap().entries.map((entry) => entry.key == selectedIndex ? newCartItem : entry.value).toImmutable();
   }
 
   // 상품 목록 삭제
   void delete(List<CartItem> deleteList) {
-    state = state.where((cartItem) {
-      return !deleteList.contains(cartItem);
-    }).toImmutable();
+    state = state.where((cartItem) => !deleteList.contains(cartItem)).toImmutable();
   }
 }
 
 
 
-==== ./lib/src/service/language_serivce.dart ====
+===== ./lib/src/service/language_serivce.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/util/helper/intl_helper.dart';
 import 'package:house_of_tomorrow/util/lang/generated/l10n.dart';
 
-
 final langServiceProvider =
-NotifierProvider<LangService, Locale>(LangService.new);
+    NotifierProvider<LangService, Locale>(LangService.new);
 
 class LangService extends Notifier<Locale> {
   get toggleLanguage => null;
@@ -2889,15 +3558,17 @@ class LangService extends Notifier<Locale> {
 }
 
 
-==== ./lib/src/service/theme_service.dart ====
+
+===== ./lib/src/service/theme_service.dart =====
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/theme/dark_theme.dart';
 import 'package:house_of_tomorrow/theme/foundation/app_theme.dart';
 import 'package:house_of_tomorrow/theme/light_theme.dart';
+import 'package:house_of_tomorrow/theme/res/layout.dart';
 
 final themeServiceProvider =
-NotifierProvider<ThemeService, AppTheme>(ThemeService.new);
+    NotifierProvider<ThemeService, AppTheme>(ThemeService.new);
 
 class ThemeService extends Notifier<AppTheme> {
   @override
@@ -2909,8 +3580,7 @@ class ThemeService extends Notifier<AppTheme> {
   }
 
   /// Material ThemeData 커스텀
-  ThemeData get themeData {
-    return ThemeData(
+  ThemeData get themeData => ThemeData(
       /// Scaffold
       scaffoldBackgroundColor: state.color.surface,
 
@@ -2930,9 +3600,11 @@ class ThemeService extends Notifier<AppTheme> {
       /// BottomSheet
       bottomSheetTheme: const BottomSheetThemeData(
         backgroundColor: Colors.transparent,
+        constraints: BoxConstraints(
+          maxWidth: Breakpoints.bottomSheet,
+        )
       ),
     );
-  }
 }
 
 extension ThemeServiceExt on WidgetRef {
@@ -2944,7 +3616,8 @@ extension ThemeServiceExt on WidgetRef {
 }
 
 
-==== ./.dart_tool/flutter_build/dart_plugin_registrant.dart ====
+
+===== ./.dart_tool/flutter_build/dart_plugin_registrant.dart =====
 //
 // Generated file. Do not edit.
 // This file is generated from template in file `flutter_tools/lib/src/flutter_plugins.dart`.
@@ -3050,7 +3723,7 @@ class _PluginRegistrant {
 
 
 
-==== ./.dart_tool/dartpad/web_plugin_registrant.dart ====
+===== ./.dart_tool/dartpad/web_plugin_registrant.dart =====
 // Flutter web plugin registrant file.
 //
 // Generated file. Do not edit.

@@ -16,8 +16,7 @@ class ProductColorPreview extends ConsumerWidget {
   final Product product;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Container(
+  Widget build(BuildContext context, WidgetRef ref) => Container(
       decoration: BoxDecoration(
         color: ref.color.surface,
         borderRadius: BorderRadius.circular(24),
@@ -65,5 +64,4 @@ class ProductColorPreview extends ConsumerWidget {
         )
       ]),
     );
-  }
 }

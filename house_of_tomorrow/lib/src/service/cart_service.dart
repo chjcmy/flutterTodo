@@ -10,9 +10,7 @@ class CartService extends Notifier<List<CartItem>> {
   List<CartItem> build() => const [];
 
   /// 선택된 상품 목록
-  List<CartItem> get selectedCartItemList {
-    return state.where((cartItem) => cartItem.isSelected).toImmutable();
-  }
+  List<CartItem> get selectedCartItemList => state.where((cartItem) => cartItem.isSelected).toImmutable();
 
   /// 상품 추가
   void add(CartItem newCartItem) {
@@ -21,15 +19,11 @@ class CartService extends Notifier<List<CartItem>> {
 
   // 상품 수정
   void update(int selectedIndex, CartItem newCartItem) {
-    state = state.asMap().entries.map((entry) {
-      return entry.key == selectedIndex ? newCartItem : entry.value;
-    }).toImmutable();
+    state = state.asMap().entries.map((entry) => entry.key == selectedIndex ? newCartItem : entry.value).toImmutable();
   }
 
   // 상품 목록 삭제
   void delete(List<CartItem> deleteList) {
-    state = state.where((cartItem) {
-      return !deleteList.contains(cartItem);
-    }).toImmutable();
+    state = state.where((cartItem) => !deleteList.contains(cartItem)).toImmutable();
   }
 }

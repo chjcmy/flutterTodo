@@ -8,10 +8,10 @@ import 'package:house_of_tomorrow/util/lang/generated/l10n.dart';
 class CartCheckoutDialog extends ConsumerWidget {
   const CartCheckoutDialog({
     super.key,
-    required this.onCheckOutPressed,
+    required this.onCheckoutPressed,
   });
 
-  final Function() onCheckOutPressed;
+  final void Function() onCheckoutPressed;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) => BaseDialog(
@@ -28,7 +28,7 @@ class CartCheckoutDialog extends ConsumerWidget {
             backgroundColor: ref.color.secondary,
             onPressed: () {
               Navigator.pop(context);
-              onCheckOutPressed();
+              onCheckoutPressed();
             },
           ),
           const SizedBox(
